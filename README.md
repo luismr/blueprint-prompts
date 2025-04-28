@@ -1,5 +1,8 @@
 # Blueprint Prompts
 
+[![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
+[![Markdown](https://img.shields.io/badge/markdown-1.x-lightgrey.svg)](https://daringfireball.net/projects/markdown/)
+
 A collection of comprehensive prompts designed to help you create projects from scratch using AI-powered IDEs like Cursor or other agent-based development environments.
 
 ## Purpose
