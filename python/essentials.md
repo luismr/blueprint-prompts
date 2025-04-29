@@ -48,6 +48,83 @@ Create a workflow that:
 - Checks code quality
 - (Optional) Deploys documentation
 
+### 6. VSCode Debug Configuration (launch.json)
+Create a `.vscode/launch.json` file with configurations for:
+- Debugging all tests
+- Debugging the current test file
+- Debugging the current test case
+
+#### Example launch.json
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Tests",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests",
+                "-v",
+                "--no-cov"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "${workspaceFolder}/venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}"
+            }
+        },
+        {
+            "name": "Python: Debug Current Test",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "${file}",
+                "-v",
+                "--no-cov",
+                "-k",
+                "${selectedText}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "${workspaceFolder}/venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}"
+            }
+        },
+        {
+            "name": "Python: Debug Current Test File",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "${file}",
+                "-v",
+                "--no-cov"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "python": "${workspaceFolder}/venv/bin/python",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src:${PYTHONPATH}"
+            }
+        }
+    ]
+}
+```
+
+- **Python: Debug Tests** runs all tests in the `tests` directory with verbose output and no coverage.
+- **Python: Debug Current Test File** runs all tests in the currently open test file.
+- **Python: Debug Current Test** runs the test case currently selected in the editor (select the test name before running).
+
+> Place this file in the `.vscode/` directory at the root of your project.
+
 ## Additional Considerations
 1. Use type hints in Python code
 2. Include docstrings following Google style
