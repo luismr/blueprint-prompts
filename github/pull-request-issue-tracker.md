@@ -1,5 +1,6 @@
-Please create a pull request for my recent changes using the following template, and include details from the related issue tracker ticket.
+Please create a pull request for my recent changes using the template below. 
 
+- First, fetch the latest git log and diffs, then generate a pull request description based on those changes.
 - Prefix the pull request title with the ticket ID in square brackets (e.g., [DEV-123456] Pull request title).
 - Fill in all relevant sections of the template with details from my latest commit(s) and the linked issue, including a summary of the changes, motivation, ticket description, acceptance criteria, and any other required information.
 - Follow the section structure and headings as defined in the template.
