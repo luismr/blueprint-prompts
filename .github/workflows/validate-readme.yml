@@ -38,6 +38,4 @@ jobs:
           body: |
             ## :mag: README Validation Results
 
-            ```
             ${{ steps.set-validation-output.outputs.results }}
-            ```
