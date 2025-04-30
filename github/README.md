@@ -4,7 +4,7 @@ This directory contains a collection of prompts designed to help you create and 
 
 ## Available Prompts
 
-### 1. Basic Pull Request (`pull-request-basic.md`)
+### 1. Basic Pull Request ([pull-request-basic.md](pull-request-basic.md))
 A comprehensive guide for creating a standard pull request. This prompt covers:
 - Pull request title and description
 - Code changes summary
@@ -19,7 +19,7 @@ The prompt includes templates and examples for:
 - Review checklist items
 - Additional PR setup considerations
 
-### 2. Issue Tracker Pull Request (`pull-request-issue-tracker.md`)
+### 2. Issue Tracker Pull Request ([pull-request-issue-tracker.md](pull-request-issue-tracker.md))
 A specialized guide for creating pull requests that are linked to issue tracking. This prompt covers:
 - Issue reference and linking
 - Change impact analysis
