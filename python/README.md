@@ -4,7 +4,7 @@ This directory contains a collection of prompts designed to help you set up and 
 
 ## Available Prompts
 
-### 1. Essentials (`essentials.md`)
+### 1. Essentials (`python-essentials.md`)
 A comprehensive guide for setting up a new Python project with all the essential components. This prompt covers:
 - Project structure and documentation
 - License setup
@@ -22,6 +22,23 @@ The prompt includes templates and examples for:
 - GitHub Actions workflow
 - Additional project setup considerations
 
+### 2. Essentials with DDD (`python-essentials-ddd.md`)
+A specialized guide for setting up Python projects using Domain-Driven Design (DDD) principles. This prompt extends the essentials with:
+- DDD project structure and architecture
+- Domain modeling and bounded contexts
+- Repository pattern implementation
+- Service layer organization
+- API controller setup
+- Comprehensive testing strategy
+- Documentation standards
+
+The prompt provides:
+- Detailed project structure templates
+- Implementation examples
+- Testing guidelines
+- Documentation requirements
+- Best practices for DDD in Python
+
 ## How to Use These Prompts
 
 1. Select the prompt that matches your needs
@@ -37,6 +54,7 @@ When using these prompts, keep in mind:
 - Keep documentation up to date
 - Follow Python best practices and PEP guidelines
 - Consider security implications when setting up your project
+- When using DDD, ensure proper domain modeling and bounded context separation
 
 ## Future Prompts
 
@@ -46,5 +64,6 @@ This directory will be updated with additional prompts covering:
 - Deployment configurations
 - Performance optimization
 - Security best practices
+- Additional architectural patterns
 
 Stay tuned for more comprehensive Python development prompts! 
