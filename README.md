@@ -19,8 +19,13 @@ This repository serves as a base of prompt examples that guide AI coding assista
 
 ## Available Blueprints
 
-### Python
-- [Python Essentials](python/essentials.md) - Complete guide for setting up Python projects with best practices
+### [Python](python/README.md)
+- [Python Essentials](python/python-essentials.md) - Complete guide for setting up Python projects with best practices
+- [Python Essentials with DDD](python/python-essentials-ddd.md) - Guide for setting up Python projects using Domain-Driven Design principles
+
+### [GitHub](github/README.md)
+- [Basic Pull Request](github/pull-request-basic.md) - Template for creating standard pull requests
+- [Issue Tracker Pull Request](github/pull-request-issue-tracker.md) - Template for pull requests linked to issue tracking
 
 ### Coming Soon
 - Java 21 with Maven
