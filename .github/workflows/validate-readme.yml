@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Validate README.md files
-        id: validate-readme
+        id: validate
         run: |
           bash .github/scripts/validate-readme.sh | tee validation_output.txt
           exit ${PIPESTATUS[0]}
@@ -32,6 +32,4 @@ jobs:
           body: |
             ## :mag: README Validation Results
 
-            ```
-            $(cat validation_output.txt)
-            ```
+            ${{ steps.validate.outputs.results }}
