@@ -32,4 +32,4 @@ jobs:
           body: |
             ## :mag: README Validation Results
 
-            ${{steps.validate-readme.outputs.results}}
+            ${{steps.validate-readme.outputs}}
