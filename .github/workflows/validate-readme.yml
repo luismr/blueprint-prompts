@@ -20,7 +20,7 @@ jobs:
       - name: Validate README.md files
         id: validate-readme
         run: |
-          bash .github/scripts/validate-readme.sh
+          bash .github/scripts/validate-readme.sh | tee validation_output.txt
           exit ${PIPESTATUS[0]}
         continue-on-error: true
 
@@ -32,4 +32,6 @@ jobs:
           body: |
             ## :mag: README Validation Results
 
-            ${{steps.validate-readme.outputs}}
+            ```
+            $(cat validation_output.txt)
+            ```
