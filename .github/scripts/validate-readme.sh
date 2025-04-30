@@ -59,8 +59,6 @@ if [ ${#errors[@]} -ne 0 ]; then
   exit 1
 else
   echo ""
-  echo "----------------------------------------"
   echo "🍮 All README.md files validated successfully!"
-  echo "----------------------------------------"
   echo ""
 fi 
