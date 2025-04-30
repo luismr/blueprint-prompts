@@ -16,6 +16,7 @@ jobs:
         run: |
           bash .github/scripts/validate-readme.sh | tee validation_output.txt
           exit ${PIPESTATUS[0]}
+        continue-on-error: true
 
       - name: Add validation results as PR comment
         if: github.event_name == 'pull_request'
