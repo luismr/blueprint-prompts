@@ -14,38 +14,18 @@ jobs:
 
       - name: Validate README.md files
         run: |
-          #!/bin/bash
-          
-          # Function to check if a directory has a README.md file
-          check_readme() {
-            local dir=$1
-            if [ ! -f "$dir/README.md" ]; then
-              echo "❌ Error: $dir is missing README.md file"
-              exit 1
-            fi
-          }
+          bash .github/scripts/validate-readme.sh | tee validation_output.txt
+          exit ${PIPESTATUS[0]}
 
-          # Function to check if root README.md links to directory README.md in a section heading
-          check_root_links() {
-            local dir=$1
-            local dir_name=$(basename "$dir")
-            # Look for a section heading like ### [GitHub](github/README.md)
-            if ! grep -Eiq "^### \[$dir_name\]\($dir/README.md\)" README.md; then
-              echo "❌ Error: Root README.md is missing section heading link to $dir/README.md"
-              exit 1
-            fi
-          }
+      - name: Add validation results as PR comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## :mag: README Validation Results
 
-          # Get all directories that should have README.md files
-          # Exclude .git, .github, and other special directories
-          for dir in */; do
-            dir=${dir%/}
-            if [[ "$dir" != ".git" && "$dir" != ".github" ]]; then
-              echo "🔍 Checking $dir directory..."
-              check_readme "$dir"
-              check_root_links "$dir"
-              echo "✅ $dir validation passed"
-            fi
-          done
-
-          echo "🍮 All README.md files validated successfully!" 
+            ```
+            $(cat validation_output.txt)
+            ```
