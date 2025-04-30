@@ -24,7 +24,7 @@ jobs:
 
       - name: Validate README.md files
         run: |
-          #!/bin/bash
+          #!/bin/bash -x
           
           # Function to check if a directory has a README.md file
           check_readme() {
