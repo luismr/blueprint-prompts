@@ -12,19 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pyyaml
-
       - name: Validate README.md files
         run: |
-          #!/bin/bash -x
+          #!/bin/bash
           
           # Function to check if a directory has a README.md file
           check_readme() {
@@ -40,7 +30,7 @@ jobs:
             local dir=$1
             local dir_name=$(basename "$dir")
             # Look for a section heading like ### [GitHub](github/README.md)
-            if ! grep -Eq "^### \[$dir_name\]\($dir/README.md\)" README.md; then
+            if ! grep -Eiq "^### \[$dir_name\]\($dir/README.md\)" README.md; then
               echo "❌ Error: Root README.md is missing section heading link to $dir/README.md"
               exit 1
             fi
