@@ -35,12 +35,13 @@ jobs:
             fi
           }
 
-          # Function to check if root README.md links to directory README.md
+          # Function to check if root README.md links to directory README.md in a section heading
           check_root_links() {
             local dir=$1
             local dir_name=$(basename "$dir")
-            if ! grep -q "\[$dir_name\]($dir/README.md)" README.md; then
-              echo "❌ Error: Root README.md is missing link to $dir/README.md"
+            # Look for a section heading like ### [GitHub](github/README.md)
+            if ! grep -Eq "^### \[$dir_name\]\($dir/README.md\)" README.md; then
+              echo "❌ Error: Root README.md is missing section heading link to $dir/README.md"
               exit 1
             fi
           }
@@ -57,4 +58,4 @@ jobs:
             fi
           done
 
-          echo "🎉 All README.md files validated successfully!" 
+          echo "🍮 All README.md files validated successfully!" 
