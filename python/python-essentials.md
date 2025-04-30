@@ -135,6 +135,7 @@ Create a `.vscode/launch.json` file with configurations for:
    - Type checking (mypy)
 4. Include a pyproject.toml for modern Python packaging
 5. Add a CONTRIBUTING.md if the project is open source
+6. Create a Hello World and a test
 
 ## Example README.md Structure
 
@@ -245,5 +246,3 @@ isort>=5.10.1
 mypy>=0.950
 pytest>=7.1.2
 ```
-
-This blueprint can be used as a starting point for any Python 3 project, ensuring consistency and best practices across your codebase.
