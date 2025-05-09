@@ -1,7 +1,8 @@
 # Blueprint Prompts
 
-[![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
-[![Markdown](https://img.shields.io/badge/markdown-1.x-lightgrey.svg)](https://daringfireball.net/projects/markdown/)
+[![Python](https://img.shields.io/badge/python-3.x-blue.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Java](https://img.shields.io/badge/java-21-orange.svg?logo=openjdk&logoColor=white)](https://www.oracle.com/java/technologies/downloads/#java21)
+[![Markdown](https://img.shields.io/badge/markdown-1.x-lightgrey.svg?logo=markdown&logoColor=white)](https://daringfireball.net/projects/markdown/)
 
 A collection of comprehensive prompts designed to help you create projects from scratch using AI-powered IDEs like Cursor or other agent-based development environments.
 
