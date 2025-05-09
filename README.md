@@ -23,13 +23,17 @@ This repository serves as a base of prompt examples that guide AI coding assista
 - [Python Essentials](python/python-essentials.md) - Complete guide for setting up Python projects with best practices
 - [Python Essentials with DDD](python/python-essentials-ddd.md) - Guide for setting up Python projects using Domain-Driven Design principles
 
+### [Java](java/README.md)
+- [Maven with JUnit](java/java-maven-with-junit.md) - Guide for setting up Java projects with Maven and JUnit 5
+- [Maven with Lombok and JUnit](java/java-maven-with-lombok-and-junit.md) - Enhanced guide with Lombok integration
+
 ### [GitHub](github/README.md)
 - [Basic Pull Request](github/pull-request-basic.md) - Template for creating standard pull requests
 - [Issue Tracker Pull Request](github/pull-request-issue-tracker.md) - Template for pull requests linked to issue tracking
 
 ### Coming Soon
-- Java 21 with Maven
-- Java 21, SpringBoot 3.4, Maven
+- Java 21 with SpringBoot 3.4 and Maven
+- Additional Java frameworks and tools
 
 ## How to Use
 
