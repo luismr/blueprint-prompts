@@ -2,9 +2,24 @@
 
 [![Python](https://img.shields.io/badge/python-3.x-blue.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![Java](https://img.shields.io/badge/java-21-orange.svg?logo=openjdk&logoColor=white)](https://www.oracle.com/java/technologies/downloads/#java21)
+[![TypeScript](https://img.shields.io/badge/typescript-5.8.x-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Markdown](https://img.shields.io/badge/markdown-1.x-lightgrey.svg?logo=markdown&logoColor=white)](https://daringfireball.net/projects/markdown/)
 
 A collection of comprehensive prompts designed to help you create projects from scratch using AI-powered IDEs like Cursor or other agent-based development environments.
+
+## Index
+
+- [Purpose](#purpose)
+- [Available Blueprints](#available-blueprints)
+  - [Python](#python)
+  - [TypeScript](#typescript)
+  - [Java](#java)
+  - [GitHub](#github)
+- [How to Use](#how-to-use)
+- [Contributing](#contributing)
+  - [Contribution Guidelines](#contribution-guidelines)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Purpose
 
@@ -23,6 +38,13 @@ This repository serves as a base of prompt examples that guide AI coding assista
 ### [Python](python/README.md)
 - [Python Essentials](python/python-essentials.md) - Complete guide for setting up Python projects with best practices
 - [Python Essentials with DDD](python/python-essentials-ddd.md) - Guide for setting up Python projects using Domain-Driven Design principles
+
+### [TypeScript](typescript/README.md)
+- [TypeScript with Vite and Jest](typescript/typescript-vite-with-jest.md) - Guide for setting up TypeScript projects with Vite and Jest
+- [TypeScript with Vite, Jest, and React](typescript/typescript-vite-with-jest-and-react.md) - Guide for React development with TypeScript
+- [TypeScript with Vite, Jest, Vue, and Nuxt](typescript/typescript-vite-with-jest-vue-and-nuxt.md) - Guide for Vue.js and Nuxt.js development
+- [TypeScript with Vite, Angular, Jasmine, and Karma](typescript/typescript-vite-with-angular-jasmine-karma.md) - Guide for Angular development
+- [TypeScript with Node.js, Express, and Jest](typescript/typescript-node-with-jest-express.md) - Guide for backend development
 
 ### [Java](java/README.md)
 - [Maven with JUnit](java/java-maven-with-junit.md) - Guide for setting up Java projects with Maven and JUnit 5
