@@ -1,6 +1,28 @@
-# TypeScript Project Setup with Angular and Vite
+# Create TypeScript Project with Angular and Vite
 
-Create a new TypeScript project with the following specifications:
+This blueprint provides a foundation for building a TypeScript application using Angular and Vite, with Jasmine and Karma for testing. It follows best practices for Angular development and includes essential configurations and dependencies.
+
+Key characteristics of a TypeScript Angular project include:
+
+- Angular framework and components
+- Vite build tooling and dev server
+- TypeScript configuration and type safety
+- Testing with Jasmine and Karma
+- SCSS styling support
+- VS Code debugging support
+- Environment configuration
+- Component-based architecture
+
+This setup ensures:
+- Type-safe development
+- Component reusability
+- Fast development builds with Vite
+- Comprehensive testing
+- Maintainable styling
+- Production optimization
+- Clear project structure
+
+The Angular setup can be extended with additional features and libraries based on specific project needs.
 
 ## Project Structure
 ```

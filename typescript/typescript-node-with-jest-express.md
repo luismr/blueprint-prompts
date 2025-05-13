@@ -1,6 +1,27 @@
-# TypeScript Express API Project Setup with ts-node and Jest
+# Create TypeScript Express API Project with ts-node and Jest
 
-Create a new TypeScript Express API project with the following specifications:
+This blueprint provides a foundation for building a TypeScript Express API using ts-node for development and Jest for testing. It follows best practices for TypeScript development and includes essential configurations and dependencies.
+
+Key characteristics of a TypeScript Express API project include:
+
+- TypeScript configuration and type safety
+- Express.js web framework setup
+- API routing and controllers
+- Swagger API documentation
+- Testing with Jest
+- Development tools (ts-node, ts-node-dev)
+- CORS and security middleware
+- VS Code debugging support
+
+This setup ensures:
+- Type-safe development
+- Clean code architecture
+- API documentation and testing
+- Development productivity
+- Production readiness
+- Easy maintenance and scaling
+
+The Express API setup can be extended with additional middleware and features based on specific project needs.
 
 ## Project Structure
 ```
