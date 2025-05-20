@@ -1,5 +1,35 @@
 # Create TypeScript Project with Vue/Nuxt, Vite and Jest
 
+## Description
+
+This prompt template helps you create a new TypeScript project configured with Vue/Nuxt, Vite, and Jest. It provides a complete development environment with:
+
+1. Development tooling:
+   - Vite for fast builds and development
+   - TypeScript for type safety
+   - Jest and Vue Test Utils for testing
+   - VS Code debugging configuration
+   - Nuxt framework features and auto-imports
+
+2. Project organization:
+   - Component-based architecture
+   - Separate business logic from UI components
+   - Organized test structure
+   - Clear folder hierarchy
+   - Nuxt pages and layouts
+
+3. Usage:
+   - Copy the project structure and configurations
+   - Install dependencies using npm/yarn
+   - Start development with `npm run dev`
+   - Run tests with `npm test`
+   - Build for production with `npm run build`
+
+The template includes example components and tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
+
+
+## Prompt
+
 This blueprint provides a foundation for building a TypeScript application using Vue/Nuxt and Vite, with Jest for testing. It follows best practices for Vue development and includes essential configurations and dependencies.
 
 Key characteristics of a TypeScript Vue/Nuxt project include:

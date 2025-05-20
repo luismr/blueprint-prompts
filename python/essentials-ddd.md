@@ -1,5 +1,37 @@
 # Create Python Project Blueprint with Domain-Driven Design (DDD)
 
+## Description
+
+This prompt helps you create a Python project structure following Domain-Driven Design (DDD) principles. It provides a complete project organization that emphasizes business domain modeling, bounded contexts, and clean separation of concerns.
+
+The prompt will:
+- Generate a DDD-oriented project structure
+- Set up domain, application, and infrastructure layers
+- Create sample domain models and value objects
+- Configure dependency injection
+- Add testing infrastructure
+- Include documentation templates
+
+Use this prompt when you want to:
+- Start a new Python project using DDD
+- Organize code around business domains
+- Implement complex business logic cleanly
+- Maintain clear boundaries between contexts
+- Follow DDD best practices
+- Create maintainable domain models
+- Set up a scalable project structure
+
+The generated project will include:
+- Domain layer with entities and value objects
+- Application services for use cases
+- Infrastructure implementations
+- API/Interface adapters
+- Testing setup for all layers
+- Documentation structure
+- Configuration files
+
+## Prompt
+
 This blueprint provides a foundation for a Python project using Domain-Driven Design principles, with a clear separation of concerns and a structured approach to development. It extends the basic Python project blueprint to include a Domain-Driven Design (DDD) structure, with folders separated by features and detailed folder contents for each feature.
 
 Key characteristics of a Python DDD project include:

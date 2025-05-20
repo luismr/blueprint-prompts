@@ -1,5 +1,39 @@
 # Create TypeScript Express API Project with ts-node and Jest
 
+## Description
+
+This prompt helps you create a TypeScript Express API project with ts-node for development and Jest for testing. It provides a complete project structure following TypeScript and Express.js best practices with testing capabilities.
+
+The prompt will:
+- Generate a TypeScript Express API structure
+- Set up ts-node for development
+- Configure Jest testing framework
+- Add Swagger API documentation
+- Include essential middleware
+- Set up debugging support
+- Create basic documentation
+
+Use this prompt when you want to:
+- Start a new TypeScript Express API
+- Set up automated testing with Jest
+- Follow TypeScript best practices
+- Include API documentation
+- Create a maintainable project structure
+- Enable efficient development workflow
+
+The generated project will include:
+- TypeScript configuration
+- Express.js setup
+- Jest test configuration
+- Swagger documentation
+- Development tools (ts-node)
+- Sample API endpoints
+- VS Code debugging
+- Basic documentation files
+
+
+## Prompt
+
 This blueprint provides a foundation for building a TypeScript Express API using ts-node for development and Jest for testing. It follows best practices for TypeScript development and includes essential configurations and dependencies.
 
 Key characteristics of a TypeScript Express API project include:

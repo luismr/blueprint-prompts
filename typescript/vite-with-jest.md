@@ -1,5 +1,33 @@
 # TypeScript Project Setup with Vite and Jest
 
+## Description
+
+This prompt template helps you create a new TypeScript project configured with Vite and Jest. It provides a complete development environment with:
+
+1. Development tooling:
+   - Vite for fast builds and development
+   - TypeScript for type safety
+   - Jest for testing
+   - VS Code debugging configuration
+
+2. Project organization:
+   - Modular code structure
+   - Separate business logic
+   - Organized test structure
+   - Clear folder hierarchy
+
+3. Usage:
+   - Copy the project structure and configurations
+   - Install dependencies using npm/yarn
+   - Start development with `npm run dev`
+   - Run tests with `npm test`
+   - Build for production with `npm run build`
+
+The template includes example calculator and hello world modules with tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
+
+
+## Prompt
+
 Create a new TypeScript project with the following specifications:
 
 ## Project Structure

@@ -1,5 +1,38 @@
 # Create TypeScript Project with Angular and Vite
 
+## Description
+
+This prompt helps you create a TypeScript project using Angular framework with Vite as the build tool and Jasmine/Karma for testing. It provides a complete project structure following Angular best practices with modern build tooling.
+
+The prompt will:
+- Generate an Angular project structure
+- Set up Vite for fast builds
+- Configure Jasmine and Karma testing
+- Add SCSS styling support
+- Include VS Code debugging
+- Create component templates
+- Set up environment configs
+
+Use this prompt when you want to:
+- Start a new Angular project with Vite
+- Set up automated testing with Jasmine
+- Follow Angular best practices
+- Enable efficient development workflow
+- Create maintainable components
+- Structure a scalable application
+
+The generated project will include:
+- Angular framework setup
+- Vite build configuration
+- Jasmine/Karma test setup
+- SCSS styling support
+- Sample components
+- Environment files
+- VS Code debugging
+- Basic documentation
+
+## Prompt
+
 This blueprint provides a foundation for building a TypeScript application using Angular and Vite, with Jasmine and Karma for testing. It follows best practices for Angular development and includes essential configurations and dependencies.
 
 Key characteristics of a TypeScript Angular project include:

@@ -1,5 +1,37 @@
 # Create a Vanilla Python Project 
 
+## Description
+
+This prompt helps you create a basic Python project structure following standard conventions. It provides a complete project organization that can serve as a foundation for any Python application without specialized frameworks.
+
+The prompt will:
+- Generate a standard Python project structure
+- Set up basic configuration files
+- Configure testing infrastructure
+- Add code quality tools
+- Set up documentation
+- Include CI/CD configurations
+- Create license and README files
+
+Use this prompt when you want to:
+- Start a new Python project from scratch
+- Follow Python best practices
+- Set up automated testing
+- Include essential development tools
+- Create a maintainable project structure
+
+The generated project will include:
+- Standard Python package layout
+- Test configuration with pytest
+- Code quality tools (flake8, black)
+- Virtual environment setup
+- Documentation structure
+- Basic CI/CD configuration
+- License and README templates
+
+
+## Prompt
+
 A vanilla Python project is a basic, minimal Python project setup that follows standard Python development practices and conventions. It provides a clean foundation for building Python applications without any specialized frameworks or complex dependencies.
 
 Key characteristics of a vanilla Python project include:

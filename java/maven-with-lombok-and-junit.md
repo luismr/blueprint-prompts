@@ -1,5 +1,39 @@
 # Create a Maven Project with Lombok and JUnit 5
 
+## Description
+
+This prompt helps you create a Maven project with Lombok and JUnit 5 testing framework. It provides a complete project structure following Maven conventions and includes essential configurations for Java development with testing capabilities and reduced boilerplate code.
+
+The prompt will:
+- Generate a standard Maven project structure
+- Set up Lombok for reducing boilerplate code
+- Configure JUnit 5 testing framework
+- Set up code coverage reporting
+- Add logging capabilities
+- Include CI/CD configurations
+- Create basic documentation
+
+Use this prompt when you want to:
+- Start a new Java project with Maven
+- Reduce boilerplate code using Lombok
+- Set up automated testing with JUnit 5
+- Follow Maven best practices
+- Include essential development tools
+- Create a maintainable project structure
+
+The generated project will include:
+- Maven standard directory layout
+- Lombok configuration and annotations
+- JUnit 5 test configuration
+- Code coverage with JaCoCo
+- Logging with SLF4J
+- Sample Java classes and tests
+- Basic documentation files
+- Git configuration
+
+
+## Prompt
+
 A Maven project with Lombok and JUnit 5 provides a standard Java project setup that follows Maven conventions and best practices for Java development. It includes Lombok for reducing boilerplate code, JUnit 5 for testing, and other essential dependencies for building robust Java applications.
 
 Key characteristics of a Maven project with Lombok and JUnit 5 include:

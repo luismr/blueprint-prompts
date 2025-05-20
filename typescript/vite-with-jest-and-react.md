@@ -1,5 +1,32 @@
 # Create TypeScript Project with React, Vite and Jest
 
+## Description
+
+This prompt template helps you create a new TypeScript project configured with React, Vite, and Jest. It provides a complete development environment with:
+
+1. Development tooling:
+   - Vite for fast builds and development
+   - TypeScript for type safety
+   - Jest and React Testing Library for testing
+   - VS Code debugging configuration
+
+2. Project organization:
+   - Component-based architecture
+   - Separate business logic from UI components
+   - Organized test structure
+   - Clear folder hierarchy
+
+3. Usage:
+   - Copy the project structure and configurations
+   - Install dependencies using npm/yarn
+   - Start development with `npm run dev`
+   - Run tests with `npm test`
+   - Build for production with `npm run build`
+
+The template includes example components and tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
+
+## Prompt
+
 This blueprint provides a foundation for building a TypeScript application using React and Vite, with Jest for testing. It follows best practices for React development and includes essential configurations and dependencies.
 
 Key characteristics of a TypeScript React project include:
