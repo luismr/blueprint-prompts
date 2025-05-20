@@ -135,4 +135,5 @@ This project is licensed under the [MIT License](LICENSE.md) - Copyright (c) 202
 
 - All contributors who help expand this collection
 - The AI coding assistant community
-- Open source projects that inspire these prompts 
+- Open source projects that inspire these prompts
+- [MCP Server](mcp-server/README.md) 

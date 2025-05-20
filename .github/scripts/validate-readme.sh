@@ -41,7 +41,7 @@ check_folder_links() {
 # Exclude .git, .github, and other special directories
 for dir in */; do
   dir=${dir%/}
-  if [[ "$dir" != ".git" && "$dir" != ".github" ]]; then
+  if [[ "$dir" != ".git" && "$dir" != ".github" && "$dir" != "mcp-server" ]]; then
     echo "🔍 Checking $dir directory..."
     check_readme "$dir"
     check_root_links "$dir"
