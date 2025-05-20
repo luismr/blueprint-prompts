@@ -2,33 +2,20 @@
 
 ## Description
 
-This prompt helps you create a well-structured pull request description based on your recent code changes. It analyzes your git history and diffs to automatically generate a comprehensive pull request that follows best practices.
+Creates a well-structured pull request description by analyzing your recent code changes. The prompt takes your git history and diffs as input and generates a comprehensive pull request that follows best practices.
 
-The prompt will:
-- Fetch your latest git commits and changes
-- Generate a clear title and summary
-- List specific changes made
-- Explain the motivation behind the changes
-- Include a checklist of best practices
+The generated pull request will include:
+- Clear summary of changes
+- Detailed list of modifications 
+- Motivation behind the changes
+- Best practices checklist
 
-The generated pull request will follow a standard template with sections for:
-- Summary: High-level overview of changes
-- Changes: Detailed list of modifications
-- Motivation: Reasoning behind the changes
-- Checklist: Best practices verification
+Example usage:
+- "Create a pull request for my recent refactoring changes"
+- "Generate a PR description for my bug fix commits"
+- "Make a pull request for my new feature implementation"
 
-The checklist will include language-specific best practices as well as general code quality checks like:
-- Code style and formatting
-- Test coverage
-- Documentation updates
-- Performance considerations
-- Security implications
-
-Use this prompt when you want to:
-- Create a new pull request
-- Generate a structured PR description
-- Ensure your changes follow best practices
-- Make your code changes clear for reviewers
+The output will be a formatted Markdown pull request with all relevant sections filled in based on your recent commits and changes.
 
 ## Prompt
 

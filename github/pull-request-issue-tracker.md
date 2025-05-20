@@ -2,40 +2,22 @@
 
 ## Description
 
-This prompt helps you create a well-structured pull request description based on your recent code changes and linked issue tracker tickets. It analyzes your git history, diffs, and issue tracker data to automatically generate a comprehensive pull request that follows best practices and maintains traceability to requirements.
+Generates a comprehensive pull request description by analyzing git history and issue tracker data.
+The prompt takes your recent code changes and linked tickets as input to create a well-structured PR that follows best practices and maintains requirements traceability.
 
-The prompt will:
-- Fetch your latest git commits and changes
-- Link to the associated issue tracker ticket
-- Extract ticket details like description and acceptance criteria
-- Generate a clear title and summary
-- List specific changes made
-- Explain the motivation behind the changes
-- Include a checklist of best practices
+The generated pull request will include:
+- Ticket details from the linked issue tracker
+- Clear summary of changes
+- Detailed list of modifications 
+- Motivation behind the changes
+- Best practices checklist
 
-The generated pull request will follow a standard template with sections for:
-- Ticket Details: Information from the linked issue tracker ticket
-- Summary: High-level overview of changes
-- Changes: Detailed list of modifications
-- Motivation: Reasoning behind the changes
-- Checklist: Best practices verification
-
-The checklist will include language-specific best practices as well as general code quality checks like:
-- Code style and formatting
-- Test coverage
-- Documentation updates
-- Performance considerations
-- Security implications
-- Acceptance criteria validation
-
-Use this prompt when you want to:
-- Create a new pull request linked to an issue
-- Generate a structured PR description
-- Ensure changes meet acceptance criteria
-- Track requirements implementation
-- Make code changes clear for reviewers
-- Maintain traceability between code and requirements
-
+Example usage:
+- "Create a pull request for my feature branch with linked JIRA ticket DEV-123"
+- "Generate a PR description from my commits and reference Trello card TR-456" 
+- "Make a pull request that links to Azure DevOps work item #789"
+- "Create a PR with GitHub issue #42 details included"
+- "Generate a pull request description with Asana task details"
 
 ## Prompt
 
