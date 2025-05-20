@@ -16,11 +16,18 @@ def process_file(file_path, folder, mcp):
 
     tool_name = f"{filename_no_ext.replace('-', '_')}"
     
-    # Read first line for description
+    # Read description from ## Description section
+    description = ""
     with open(file_path, encoding="utf-8") as f:
-        first_line = f.readline().strip()
+        content = f.read()
+        description_match = re.search(r'## Description\n\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
+        if description_match:
+            description = description_match.group(1).strip()
+        else:
+            # Fallback to first line if no Description section found
+            first_line = content.split('\n')[0].strip()
+            description = first_line.lstrip('#').strip() if first_line.startswith('#') else first_line
     
-    description = first_line.lstrip('#').strip() if first_line.startswith('#') else first_line
     tags = {"dynamic", folder, filename_token}
     
     # Define the tool function
