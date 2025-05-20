@@ -2,34 +2,40 @@
 
 ## Description
 
-This prompt helps you create a TypeScript project using Angular framework with Vite as the build tool and Jasmine/Karma for testing. It provides a complete project structure following Angular best practices with modern build tooling.
+Creates a well-structured TypeScript project with Angular and Vite by generating a complete project structure that follows Angular best practices. The prompt sets up essential configurations and dependencies needed for building robust Angular applications with comprehensive testing capabilities using Jasmine and Karma.
+
+The generated project will include:
+- Angular framework configuration and setup
+- Vite build system integration
+- Jasmine and Karma testing framework
+- Component architecture scaffolding
+- SCSS styling configuration
+- TypeScript type safety
+- VS Code debugging support
+- Environment configuration
+
+Example usage:
+- "Create a new Angular project with Vite and testing"
+- "Generate an Angular template with Jasmine tests"
+- "Set up a TypeScript project using Angular and Vite"
+- "Create an Angular application with Karma testing"
 
 The prompt will:
-- Generate an Angular project structure
-- Set up Vite for fast builds
-- Configure Jasmine and Karma testing
+- Generate the standard Angular project structure
+- Configure Vite as the build tool
+- Set up Jasmine and Karma for testing
+- Create sample components and services
 - Add SCSS styling support
-- Include VS Code debugging
-- Create component templates
-- Set up environment configs
+- Include TypeScript configuration
+- Create VS Code launch configurations
 
 Use this prompt when you want to:
 - Start a new Angular project with Vite
 - Set up automated testing with Jasmine
 - Follow Angular best practices
-- Enable efficient development workflow
-- Create maintainable components
-- Structure a scalable application
-
-The generated project will include:
-- Angular framework setup
-- Vite build configuration
-- Jasmine/Karma test setup
-- SCSS styling support
-- Sample components
-- Environment files
-- VS Code debugging
-- Basic documentation
+- Include essential development tools
+- Create maintainable component architecture
+- Enable type-safe development
 
 ## Prompt
 

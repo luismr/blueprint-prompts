@@ -2,31 +2,37 @@
 
 ## Description
 
-This prompt helps you create a Maven project with JUnit 5 testing framework. It provides a complete project structure following Maven conventions and includes essential configurations for Java development with testing capabilities.
-
-The prompt will:
-- Generate a standard Maven project structure
-- Set up JUnit 5 testing framework
-- Configure code coverage reporting
-- Add logging capabilities
-- Include CI/CD configurations
-- Create basic documentation
-
-Use this prompt when you want to:
-- Start a new Java project with Maven
-- Set up automated testing with JUnit 5
-- Follow Maven best practices
-- Include essential development tools
-- Create a maintainable project structure
+Creates a well-structured Maven project with JUnit 5 testing framework by generating a complete project structure that follows Maven conventions and best practices. The prompt sets up essential configurations and dependencies needed for Java development with comprehensive testing capabilities.
 
 The generated project will include:
-- Maven standard directory layout
-- JUnit 5 test configuration
-- Code coverage with JaCoCo
-- Logging with SLF4J
-- Sample Java classes and tests
-- Basic documentation files
-- Git configuration
+- Standard Maven project structure and layout
+- JUnit 5 testing framework configuration
+- Code coverage reporting with JaCoCo
+- Logging capabilities with SLF4J
+- CI/CD pipeline configurations
+- Basic project documentation
+- Git version control setup
+
+Example usage:
+- "Create a new Maven project for my Java application with JUnit tests"
+- "Generate a Maven project structure with testing capabilities"
+- "Set up a Java project with Maven and JUnit 5 testing"
+- "Create a Maven project template with code coverage and logging"
+
+The prompt will:
+- Generate the standard Maven directory structure
+- Configure JUnit 5 for testing
+- Set up code coverage reporting
+- Add logging support
+- Include CI/CD configurations
+- Create documentation files
+
+Use this prompt when you want to:
+- Start a new Java project with Maven build system
+- Set up automated testing with JUnit 5 framework
+- Follow Maven conventions and best practices
+- Include essential development tools and dependencies
+- Create a maintainable and well-structured project
 
 ## Prompt
 

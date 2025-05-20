@@ -2,28 +2,41 @@
 
 ## Description
 
-This prompt template helps you create a new TypeScript project configured with React, Vite, and Jest. It provides a complete development environment with:
+Creates a well-structured TypeScript project with React and Vite by generating a complete project structure that follows React best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust React applications with comprehensive testing capabilities using Jest.
 
-1. Development tooling:
-   - Vite for fast builds and development
-   - TypeScript for type safety
-   - Jest and React Testing Library for testing
-   - VS Code debugging configuration
+The generated project will include:
+- React framework configuration and setup 
+- Vite build system integration
+- Jest testing framework
+- Component architecture scaffolding
+- TypeScript type safety
+- VS Code debugging support
+- Environment configuration
+- Hot module replacement
 
-2. Project organization:
-   - Component-based architecture
-   - Separate business logic from UI components
-   - Organized test structure
-   - Clear folder hierarchy
+Example usage:
+- "Create a new React project with Vite and testing"
+- "Generate a React template with Jest tests"
+- "Set up a TypeScript project using React and Vite"
+- "Create a React application with Jest testing"
 
-3. Usage:
-   - Copy the project structure and configurations
-   - Install dependencies using npm/yarn
-   - Start development with `npm run dev`
-   - Run tests with `npm test`
-   - Build for production with `npm run build`
+The prompt will:
+- Generate the standard React project structure
+- Configure Vite as the build tool
+- Set up Jest for testing
+- Create sample components
+- Add TypeScript configuration
+- Include development tools
+- Create VS Code launch configurations
 
-The template includes example components and tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
+Use this prompt when you want to:
+- Start a new React project with Vite
+- Set up automated testing with Jest
+- Follow React best practices
+- Include essential development tools
+- Create maintainable component architecture
+- Enable type-safe development
+
 
 ## Prompt
 

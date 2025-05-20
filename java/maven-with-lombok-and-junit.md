@@ -2,34 +2,40 @@
 
 ## Description
 
-This prompt helps you create a Maven project with Lombok and JUnit 5 testing framework. It provides a complete project structure following Maven conventions and includes essential configurations for Java development with testing capabilities and reduced boilerplate code.
-
-The prompt will:
-- Generate a standard Maven project structure
-- Set up Lombok for reducing boilerplate code
-- Configure JUnit 5 testing framework
-- Set up code coverage reporting
-- Add logging capabilities
-- Include CI/CD configurations
-- Create basic documentation
-
-Use this prompt when you want to:
-- Start a new Java project with Maven
-- Reduce boilerplate code using Lombok
-- Set up automated testing with JUnit 5
-- Follow Maven best practices
-- Include essential development tools
-- Create a maintainable project structure
+Creates a well-structured Maven project with Lombok and JUnit 5 by generating a complete project structure that follows Maven conventions and best practices. The prompt sets up essential configurations and dependencies needed for Java development with comprehensive testing capabilities and reduced boilerplate code.
 
 The generated project will include:
-- Maven standard directory layout
-- Lombok configuration and annotations
-- JUnit 5 test configuration
-- Code coverage with JaCoCo
-- Logging with SLF4J
-- Sample Java classes and tests
-- Basic documentation files
-- Git configuration
+- Standard Maven project structure and layout
+- Lombok configuration for code generation
+- JUnit 5 testing framework setup
+- Code coverage reporting with JaCoCo
+- Logging capabilities with SLF4J
+- CI/CD pipeline configurations
+- Basic project documentation
+- Git version control setup
+
+Example usage:
+- "Create a new Maven project with Lombok and JUnit tests"
+- "Generate a Maven project structure with Lombok and testing"
+- "Set up a Java project using Lombok and JUnit 5"
+- "Create a Maven project template with code coverage and reduced boilerplate"
+
+The prompt will:
+- Generate the standard Maven directory structure
+- Configure Lombok for code generation
+- Set up JUnit 5 for testing
+- Configure code coverage reporting
+- Add logging support
+- Include CI/CD configurations
+- Create documentation files
+
+Use this prompt when you want to:
+- Start a new Java project with Maven build system
+- Reduce boilerplate code using Lombok
+- Set up automated testing with JUnit 5
+- Follow Maven conventions and best practices
+- Include essential development tools and dependencies
+- Create a maintainable and well-structured project
 
 
 ## Prompt

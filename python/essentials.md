@@ -2,32 +2,39 @@
 
 ## Description
 
-This prompt helps you create a basic Python project structure following standard conventions. It provides a complete project organization that can serve as a foundation for any Python application without specialized frameworks.
+Creates a well-structured vanilla Python project by generating a complete project structure that follows Python best practices and conventions. The prompt sets up essential files and configurations needed for Python development without specialized frameworks or complex dependencies.
+
+The generated project will include:
+- Standard Python project structure and layout
+- Basic configuration files and tooling
+- Testing infrastructure setup
+- Code quality tools configuration
+- Virtual environment management
+- Documentation templates
+- CI/CD pipeline configurations
+- Version control setup
+
+Example usage:
+- "Create a new vanilla Python project structure"
+- "Generate a basic Python project template"
+- "Set up a minimal Python development environment"
+- "Create a Python project with standard best practices"
 
 The prompt will:
-- Generate a standard Python project structure
-- Set up basic configuration files
-- Configure testing infrastructure
-- Add code quality tools
-- Set up documentation
+- Generate the standard Python directory structure
+- Configure testing frameworks
+- Set up code quality tools
+- Add documentation templates
 - Include CI/CD configurations
-- Create license and README files
+- Create essential project files
 
 Use this prompt when you want to:
 - Start a new Python project from scratch
-- Follow Python best practices
-- Set up automated testing
+- Follow Python development best practices
+- Set up a maintainable project structure
 - Include essential development tools
-- Create a maintainable project structure
-
-The generated project will include:
-- Standard Python package layout
-- Test configuration with pytest
-- Code quality tools (flake8, black)
-- Virtual environment setup
-- Documentation structure
-- Basic CI/CD configuration
-- License and README templates
+- Create a clean foundation for Python applications
+- Enable future extensibility with additional tools
 
 
 ## Prompt

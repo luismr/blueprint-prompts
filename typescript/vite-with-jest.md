@@ -2,28 +2,39 @@
 
 ## Description
 
-This prompt template helps you create a new TypeScript project configured with Vite and Jest. It provides a complete development environment with:
+Creates a well-structured TypeScript project with Vite by generating a complete project structure that follows TypeScript best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust TypeScript applications with comprehensive testing capabilities using Jest.
 
-1. Development tooling:
-   - Vite for fast builds and development
-   - TypeScript for type safety
-   - Jest for testing
-   - VS Code debugging configuration
+The generated project will include:
+- TypeScript configuration and compilation setup
+- Vite build system integration
+- Jest testing framework
+- Project structure scaffolding
+- VS Code debugging support
+- Environment configuration
+- Hot module replacement
 
-2. Project organization:
-   - Modular code structure
-   - Separate business logic
-   - Organized test structure
-   - Clear folder hierarchy
+Example usage:
+- "Create a new TypeScript project with Vite and testing"
+- "Generate a TypeScript template with Jest tests"
+- "Set up a minimal TypeScript project using Vite"
+- "Create a TypeScript application with Jest testing"
 
-3. Usage:
-   - Copy the project structure and configurations
-   - Install dependencies using npm/yarn
-   - Start development with `npm run dev`
-   - Run tests with `npm test`
-   - Build for production with `npm run build`
+The prompt will:
+- Generate the standard TypeScript project structure
+- Configure Vite as the build tool
+- Set up Jest for testing
+- Create sample code files
+- Add TypeScript configuration
+- Include development tools
+- Create VS Code launch configurations
 
-The template includes example calculator and hello world modules with tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
+Use this prompt when you want to:
+- Start a new TypeScript project with Vite
+- Set up automated testing with Jest
+- Follow TypeScript best practices
+- Include essential development tools
+- Create maintainable code architecture
+- Enable type-safe development
 
 
 ## Prompt

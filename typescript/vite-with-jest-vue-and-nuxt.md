@@ -2,31 +2,40 @@
 
 ## Description
 
-This prompt template helps you create a new TypeScript project configured with Vue/Nuxt, Vite, and Jest. It provides a complete development environment with:
+Creates a well-structured TypeScript project with Vue/Nuxt and Vite by generating a complete project structure that follows Vue and Nuxt best practices. The prompt sets up essential configurations and dependencies needed for building robust Vue/Nuxt applications with comprehensive testing capabilities using Jest.
 
-1. Development tooling:
-   - Vite for fast builds and development
-   - TypeScript for type safety
-   - Jest and Vue Test Utils for testing
-   - VS Code debugging configuration
-   - Nuxt framework features and auto-imports
+The generated project will include:
+- Vue/Nuxt framework configuration and setup
+- Vite build system integration
+- Jest testing framework
+- Component architecture scaffolding
+- TypeScript type safety
+- VS Code debugging support
+- Environment configuration
+- Auto-imports and composables
 
-2. Project organization:
-   - Component-based architecture
-   - Separate business logic from UI components
-   - Organized test structure
-   - Clear folder hierarchy
-   - Nuxt pages and layouts
+Example usage:
+- "Create a new Vue/Nuxt project with Vite and testing"
+- "Generate a Vue template with Jest tests"
+- "Set up a TypeScript project using Nuxt and Vite"
+- "Create a Vue application with Jest testing"
 
-3. Usage:
-   - Copy the project structure and configurations
-   - Install dependencies using npm/yarn
-   - Start development with `npm run dev`
-   - Run tests with `npm test`
-   - Build for production with `npm run build`
+The prompt will:
+- Generate the standard Vue/Nuxt project structure
+- Configure Vite as the build tool
+- Set up Jest for testing
+- Create sample components
+- Add TypeScript configuration
+- Include development tools
+- Create VS Code launch configurations
 
-The template includes example components and tests to demonstrate the setup and best practices. You can use this as a starting point and customize it based on your project requirements.
-
+Use this prompt when you want to:
+- Start a new Vue/Nuxt project with Vite
+- Set up automated testing with Jest
+- Follow Vue/Nuxt best practices
+- Include essential development tools
+- Create maintainable component architecture
+- Enable type-safe development
 
 ## Prompt
 

@@ -2,33 +2,39 @@
 
 ## Description
 
-This prompt helps you create a Python project structure following Domain-Driven Design (DDD) principles. It provides a complete project organization that emphasizes business domain modeling, bounded contexts, and clean separation of concerns.
+Creates a comprehensive Python project structure following Domain-Driven Design (DDD) principles by generating a complete project blueprint with clear separation of concerns and domain-focused architecture. The prompt sets up essential folders, files, and configurations needed for building maintainable domain-driven applications.
+
+The generated project will include:
+- Strategic DDD patterns (Bounded Contexts, Ubiquitous Language)
+- Tactical DDD patterns (Entities, Value Objects, Aggregates)
+- Layered architecture with clear responsibilities
+- Clean separation of business and technical concerns
+- Testing infrastructure for all layers
+- Documentation templates
+- Development tooling configuration
+
+Example usage:
+- "Create a new Python DDD project structure for my application"
+- "Generate a domain-driven design blueprint in Python"
+- "Set up a Python project following DDD principles"
+- "Create a Python project template with domain-driven architecture"
 
 The prompt will:
-- Generate a DDD-oriented project structure
-- Set up domain, application, and infrastructure layers
-- Create sample domain models and value objects
-- Configure dependency injection
-- Add testing infrastructure
-- Include documentation templates
+- Generate the complete project structure
+- Set up domain and infrastructure layers
+- Configure testing frameworks
+- Add documentation templates
+- Include development tools
+- Create example domain models
 
 Use this prompt when you want to:
 - Start a new Python project using DDD
-- Organize code around business domains
-- Implement complex business logic cleanly
-- Maintain clear boundaries between contexts
-- Follow DDD best practices
-- Create maintainable domain models
-- Set up a scalable project structure
+- Structure complex business domains
+- Follow clean architecture principles
+- Create maintainable domain-centric applications
+- Set up a scalable project foundation
+- Enable team collaboration through shared models
 
-The generated project will include:
-- Domain layer with entities and value objects
-- Application services for use cases
-- Infrastructure implementations
-- API/Interface adapters
-- Testing setup for all layers
-- Documentation structure
-- Configuration files
 
 ## Prompt
 
