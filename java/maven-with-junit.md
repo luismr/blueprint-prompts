@@ -1,6 +1,62 @@
 # Create a Maven Project with JUnit 5
 
-Create a new Maven project with the following specifications:
+## Description
+
+Creates a well-structured Maven project with JUnit 5 testing framework by generating a complete project structure that follows Maven conventions and best practices. The prompt sets up essential configurations and dependencies needed for Java development with comprehensive testing capabilities.
+
+The generated project will include:
+- Standard Maven project structure and layout
+- JUnit 5 testing framework configuration
+- Code coverage reporting with JaCoCo
+- Logging capabilities with SLF4J
+- CI/CD pipeline configurations
+- Basic project documentation
+- Git version control setup
+
+Example usage:
+- "Create a new Maven project for my Java application with JUnit tests"
+- "Generate a Maven project structure with testing capabilities"
+- "Set up a Java project with Maven and JUnit 5 testing"
+- "Create a Maven project template with code coverage and logging"
+
+The prompt will:
+- Generate the standard Maven directory structure
+- Configure JUnit 5 for testing
+- Set up code coverage reporting
+- Add logging support
+- Include CI/CD configurations
+- Create documentation files
+
+Use this prompt when you want to:
+- Start a new Java project with Maven build system
+- Set up automated testing with JUnit 5 framework
+- Follow Maven conventions and best practices
+- Include essential development tools and dependencies
+- Create a maintainable and well-structured project
+
+## Prompt
+
+A Maven project with JUnit 5 provides a standard Java project setup that follows Maven conventions and best practices for Java development. It includes JUnit 5 for testing and other essential dependencies for building robust Java applications.
+
+Key characteristics of a Maven project with JUnit 5 include:
+
+- Standard Maven directory structure
+- Basic configuration files (pom.xml, .gitignore)
+- Testing setup with JUnit 5
+- Code coverage with JaCoCo
+- Logging with SLF4J
+- Continuous Integration support
+- License and README files
+
+This setup ensures:
+- Code maintainability and readability
+- Easy project setup for new developers
+- Consistent development practices
+- Proper dependency management
+- Reliable testing and code coverage
+- Clear documentation and usage guidelines
+
+The Maven setup can be extended with additional dependencies and plugins based on specific project needs.
 
 ## Project Structure
 ```

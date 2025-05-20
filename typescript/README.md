@@ -4,7 +4,7 @@ This directory contains a collection of prompts designed to help you set up and 
 
 ## Available Prompts
 
-### 1. TypeScript with Vite and Jest ([typescript-vite-with-jest.md](typescript-vite-with-jest.md))
+### 1. TypeScript with Vite and Jest ([vite-with-jest.md](vite-with-jest.md))
 A comprehensive guide for setting up a new TypeScript project with Vite and Jest. This prompt covers:
 - Project structure and documentation
 - Vite configuration
@@ -20,7 +20,7 @@ The prompt includes templates and examples for:
 - .gitignore patterns
 - Additional project setup considerations
 
-### 2. TypeScript with Vite, Jest, and React ([typescript-vite-with-jest-and-react.md](typescript-vite-with-jest-and-react.md))
+### 2. TypeScript with Vite, Jest, and React ([vite-with-jest-and-react.md](vite-with-jest-and-react.md))
 An enhanced guide that extends the basic Vite setup with React integration. This prompt includes:
 - All features from the basic Vite setup
 - React integration and configuration
@@ -28,7 +28,7 @@ An enhanced guide that extends the basic Vite setup with React integration. This
 - TypeScript React best practices
 - Comprehensive documentation
 
-### 3. TypeScript with Vite, Jest, Vue, and Nuxt ([typescript-vite-with-jest-vue-and-nuxt.md](typescript-vite-with-jest-vue-and-nuxt.md))
+### 3. TypeScript with Vite, Jest, Vue, and Nuxt ([vite-with-jest-vue-and-nuxt.md](vite-with-jest-vue-and-nuxt.md))
 A comprehensive guide for Vue.js and Nuxt.js development with TypeScript. This prompt covers:
 - Vue.js setup with TypeScript
 - Nuxt.js integration
@@ -36,7 +36,7 @@ A comprehensive guide for Vue.js and Nuxt.js development with TypeScript. This p
 - TypeScript Vue best practices
 - Nuxt.js specific configurations
 
-### 4. TypeScript with Vite, Angular, Jasmine, and Karma ([typescript-vite-with-angular-jasmine-karma.md](typescript-vite-with-angular-jasmine-karma.md))
+### 4. TypeScript with Vite, Angular, Jasmine, and Karma ([vite-with-angular-jasmine-karma.md](vite-with-angular-jasmine-karma.md))
 A detailed guide for Angular development with TypeScript. This prompt includes:
 - Angular setup with TypeScript
 - Jasmine and Karma testing configuration
@@ -44,7 +44,7 @@ A detailed guide for Angular development with TypeScript. This prompt includes:
 - Component testing strategies
 - TypeScript Angular patterns
 
-### 5. TypeScript with Node.js, Express, and Jest ([typescript-node-with-jest-express.md](typescript-node-with-jest-express.md))
+### 5. TypeScript with Node.js, Express, and Jest ([node-with-jest-express.md](node-with-jest-express.md))
 A comprehensive guide for backend development with TypeScript. This prompt covers:
 - Node.js setup with TypeScript
 - Express.js integration

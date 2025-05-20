@@ -1,3 +1,67 @@
+# Create a Vanilla Python Project 
+
+## Description
+
+Creates a well-structured vanilla Python project by generating a complete project structure that follows Python best practices and conventions. The prompt sets up essential files and configurations needed for Python development without specialized frameworks or complex dependencies.
+
+The generated project will include:
+- Standard Python project structure and layout
+- Basic configuration files and tooling
+- Testing infrastructure setup
+- Code quality tools configuration
+- Virtual environment management
+- Documentation templates
+- CI/CD pipeline configurations
+- Version control setup
+
+Example usage:
+- "Create a new vanilla Python project structure"
+- "Generate a basic Python project template"
+- "Set up a minimal Python development environment"
+- "Create a Python project with standard best practices"
+
+The prompt will:
+- Generate the standard Python directory structure
+- Configure testing frameworks
+- Set up code quality tools
+- Add documentation templates
+- Include CI/CD configurations
+- Create essential project files
+
+Use this prompt when you want to:
+- Start a new Python project from scratch
+- Follow Python development best practices
+- Set up a maintainable project structure
+- Include essential development tools
+- Create a clean foundation for Python applications
+- Enable future extensibility with additional tools
+
+
+## Prompt
+
+A vanilla Python project is a basic, minimal Python project setup that follows standard Python development practices and conventions. It provides a clean foundation for building Python applications without any specialized frameworks or complex dependencies.
+
+Key characteristics of a vanilla Python project include:
+
+- Standard directory structure following Python packaging conventions
+- Basic configuration files (.gitignore, requirements.txt, etc.)
+- Testing setup with pytest or unittest
+- Code quality tools like flake8, black, or pylint
+- Virtual environment management
+- Documentation using docstrings and tools like Sphinx
+- Continuous Integration/Continuous Deployment (CI/CD) configuration
+- License and README files
+
+This setup ensures:
+- Code maintainability and readability
+- Easy project setup for new developers
+- Consistent development practices
+- Proper dependency management
+- Reliable testing and deployment
+- Clear documentation and usage guidelines
+
+The vanilla setup can be extended later with additional frameworks, tools, or architectural patterns (like Django, Flask, or DDD) based on specific project needs.
+
 
 ## Files to Create
 

@@ -4,7 +4,7 @@ This directory contains a collection of prompts designed to help you set up and 
 
 ## Available Prompts
 
-### 1. Maven with JUnit ([java-maven-with-junit.md](java-maven-with-junit.md))
+### 1. Maven with JUnit ([maven-with-junit.md](maven-with-junit.md))
 A comprehensive guide for setting up a new Java project with Maven and JUnit 5. This prompt covers:
 - Project structure and documentation
 - Maven configuration
@@ -21,7 +21,7 @@ The prompt includes templates and examples for:
 - .gitignore patterns
 - Additional project setup considerations
 
-### 2. Maven with Lombok and JUnit ([java-maven-with-lombok-and-junit.md](java-maven-with-lombok-and-junit.md))
+### 2. Maven with Lombok and JUnit ([maven-with-lombok-and-junit.md](maven-with-lombok-and-junit.md))
 An enhanced guide that extends the basic Maven setup with Lombok integration. This prompt includes:
 - All features from the basic Maven setup
 - Lombok integration and configuration

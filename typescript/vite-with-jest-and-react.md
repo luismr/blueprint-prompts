@@ -1,6 +1,67 @@
-# TypeScript Project Setup with React, Vite and Jest
+# Create TypeScript Project with React, Vite and Jest
 
-Create a new TypeScript project with the following specifications:
+## Description
+
+Creates a well-structured TypeScript project with React and Vite by generating a complete project structure that follows React best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust React applications with comprehensive testing capabilities using Jest.
+
+The generated project will include:
+- React framework configuration and setup 
+- Vite build system integration
+- Jest testing framework
+- Component architecture scaffolding
+- TypeScript type safety
+- VS Code debugging support
+- Environment configuration
+- Hot module replacement
+
+Example usage:
+- "Create a new React project with Vite and testing"
+- "Generate a React template with Jest tests"
+- "Set up a TypeScript project using React and Vite"
+- "Create a React application with Jest testing"
+
+The prompt will:
+- Generate the standard React project structure
+- Configure Vite as the build tool
+- Set up Jest for testing
+- Create sample components
+- Add TypeScript configuration
+- Include development tools
+- Create VS Code launch configurations
+
+Use this prompt when you want to:
+- Start a new React project with Vite
+- Set up automated testing with Jest
+- Follow React best practices
+- Include essential development tools
+- Create maintainable component architecture
+- Enable type-safe development
+
+
+## Prompt
+
+This blueprint provides a foundation for building a TypeScript application using React and Vite, with Jest for testing. It follows best practices for React development and includes essential configurations and dependencies.
+
+Key characteristics of a TypeScript React project include:
+
+- React components and hooks
+- Vite build tooling and dev server
+- TypeScript configuration and type safety
+- Testing with Jest and React Testing Library
+- Component-based architecture
+- VS Code debugging support
+- Environment configuration
+- Hot module replacement
+
+This setup ensures:
+- Type-safe development
+- Component reusability
+- Fast development builds with Vite
+- Comprehensive testing
+- Production optimization
+- Clear project structure
+
+The React setup can be extended with additional features and libraries based on specific project needs.
 
 ## Project Structure
 ```

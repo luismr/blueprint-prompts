@@ -4,11 +4,32 @@
 [![Java](https://img.shields.io/badge/java-21-orange.svg?logo=openjdk&logoColor=white)](https://www.oracle.com/java/technologies/downloads/#java21)
 [![TypeScript](https://img.shields.io/badge/typescript-5.8.x-blue.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Markdown](https://img.shields.io/badge/markdown-1.x-lightgrey.svg?logo=markdown&logoColor=white)](https://daringfireball.net/projects/markdown/)
+[![Docker](https://img.shields.io/badge/docker-28.x-blue.svg?logo=docker&logoColor=white)](https://www.docker.com/)
+
+## Description
 
 A collection of comprehensive prompts designed to help you create projects from scratch using AI-powered IDEs like Cursor or other agent-based development environments.
 
+## 🚀 Quick Start: Run MCP Server from Docker Hub
+
+Run the MCP server in daemon mode using the official Docker Hub image:
+
+```sh
+docker run -d --restart always -p 9000:9000 luismachadoreis/the-pudim-blueprint-prompts
+```
+
+Once the server is running, install it in Cursor:
+
+```sh
+npx mcp-install http://localhost:9000/sse
+```
+
+For more details and advanced usage, see the [MCP Server README](mcp-server/README.md).
+
 ## Index
 
+- [Description](#description)
+- [Quick Start: Run MCP Server from Docker Hub](#-quick-start-run-mcp-server-from-docker-hub)
 - [Purpose](#purpose)
 - [Available Blueprints](#available-blueprints)
   - [Python](#python)
@@ -114,4 +135,5 @@ This project is licensed under the [MIT License](LICENSE.md) - Copyright (c) 202
 
 - All contributors who help expand this collection
 - The AI coding assistant community
-- Open source projects that inspire these prompts 
+- Open source projects that inspire these prompts
+- [MCP Server](mcp-server/README.md) 

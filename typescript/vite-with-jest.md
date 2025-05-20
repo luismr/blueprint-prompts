@@ -1,5 +1,44 @@
 # TypeScript Project Setup with Vite and Jest
 
+## Description
+
+Creates a well-structured TypeScript project with Vite by generating a complete project structure that follows TypeScript best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust TypeScript applications with comprehensive testing capabilities using Jest.
+
+The generated project will include:
+- TypeScript configuration and compilation setup
+- Vite build system integration
+- Jest testing framework
+- Project structure scaffolding
+- VS Code debugging support
+- Environment configuration
+- Hot module replacement
+
+Example usage:
+- "Create a new TypeScript project with Vite and testing"
+- "Generate a TypeScript template with Jest tests"
+- "Set up a minimal TypeScript project using Vite"
+- "Create a TypeScript application with Jest testing"
+
+The prompt will:
+- Generate the standard TypeScript project structure
+- Configure Vite as the build tool
+- Set up Jest for testing
+- Create sample code files
+- Add TypeScript configuration
+- Include development tools
+- Create VS Code launch configurations
+
+Use this prompt when you want to:
+- Start a new TypeScript project with Vite
+- Set up automated testing with Jest
+- Follow TypeScript best practices
+- Include essential development tools
+- Create maintainable code architecture
+- Enable type-safe development
+
+
+## Prompt
+
 Create a new TypeScript project with the following specifications:
 
 ## Project Structure

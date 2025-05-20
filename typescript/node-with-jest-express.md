@@ -1,6 +1,65 @@
-# TypeScript Express API Project Setup with ts-node and Jest
+# Create TypeScript Express API Project with ts-node and Jest
 
-Create a new TypeScript Express API project with the following specifications:
+## Description
+
+Creates a well-structured TypeScript Express API project with ts-node and Jest by generating a complete project structure that follows TypeScript and Express.js best practices. The prompt sets up essential configurations and dependencies needed for building robust APIs with comprehensive testing capabilities.
+
+The generated project will include:
+- TypeScript configuration and compilation setup
+- Express.js API structure and routing
+- Jest testing framework integration
+- API documentation with Swagger
+- Development tooling with ts-node
+- Security and CORS middleware
+- VS Code debugging configuration
+
+Example usage:
+- "Create a new TypeScript Express API project with testing"
+- "Generate an Express API template with TypeScript and Jest"
+- "Set up a Node.js API using TypeScript and Express"
+- "Create a REST API project with TypeScript testing"
+
+The prompt will:
+- Generate the standard project structure
+- Configure TypeScript and ts-node
+- Set up Express.js routing and middleware
+- Configure Jest for testing
+- Add Swagger documentation
+- Include development tools
+- Create VS Code launch configurations
+
+Use this prompt when you want to:
+- Start a new API project with TypeScript
+- Set up automated testing with Jest
+- Follow Express.js best practices
+- Include essential API development tools
+- Create maintainable and documented APIs
+- Enable type-safe development
+
+## Prompt
+
+This blueprint provides a foundation for building a TypeScript Express API using ts-node for development and Jest for testing. It follows best practices for TypeScript development and includes essential configurations and dependencies.
+
+Key characteristics of a TypeScript Express API project include:
+
+- TypeScript configuration and type safety
+- Express.js web framework setup
+- API routing and controllers
+- Swagger API documentation
+- Testing with Jest
+- Development tools (ts-node, ts-node-dev)
+- CORS and security middleware
+- VS Code debugging support
+
+This setup ensures:
+- Type-safe development
+- Clean code architecture
+- API documentation and testing
+- Development productivity
+- Production readiness
+- Easy maintenance and scaling
+
+The Express API setup can be extended with additional middleware and features based on specific project needs.
 
 ## Project Structure
 ```

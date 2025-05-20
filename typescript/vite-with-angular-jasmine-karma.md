@@ -1,6 +1,67 @@
-# TypeScript Project Setup with Angular and Vite
+# Create TypeScript Project with Angular and Vite
 
-Create a new TypeScript project with the following specifications:
+## Description
+
+Creates a well-structured TypeScript project with Angular and Vite by generating a complete project structure that follows Angular best practices. The prompt sets up essential configurations and dependencies needed for building robust Angular applications with comprehensive testing capabilities using Jasmine and Karma.
+
+The generated project will include:
+- Angular framework configuration and setup
+- Vite build system integration
+- Jasmine and Karma testing framework
+- Component architecture scaffolding
+- SCSS styling configuration
+- TypeScript type safety
+- VS Code debugging support
+- Environment configuration
+
+Example usage:
+- "Create a new Angular project with Vite and testing"
+- "Generate an Angular template with Jasmine tests"
+- "Set up a TypeScript project using Angular and Vite"
+- "Create an Angular application with Karma testing"
+
+The prompt will:
+- Generate the standard Angular project structure
+- Configure Vite as the build tool
+- Set up Jasmine and Karma for testing
+- Create sample components and services
+- Add SCSS styling support
+- Include TypeScript configuration
+- Create VS Code launch configurations
+
+Use this prompt when you want to:
+- Start a new Angular project with Vite
+- Set up automated testing with Jasmine
+- Follow Angular best practices
+- Include essential development tools
+- Create maintainable component architecture
+- Enable type-safe development
+
+## Prompt
+
+This blueprint provides a foundation for building a TypeScript application using Angular and Vite, with Jasmine and Karma for testing. It follows best practices for Angular development and includes essential configurations and dependencies.
+
+Key characteristics of a TypeScript Angular project include:
+
+- Angular framework and components
+- Vite build tooling and dev server
+- TypeScript configuration and type safety
+- Testing with Jasmine and Karma
+- SCSS styling support
+- VS Code debugging support
+- Environment configuration
+- Component-based architecture
+
+This setup ensures:
+- Type-safe development
+- Component reusability
+- Fast development builds with Vite
+- Comprehensive testing
+- Maintainable styling
+- Production optimization
+- Clear project structure
+
+The Angular setup can be extended with additional features and libraries based on specific project needs.
 
 ## Project Structure
 ```
