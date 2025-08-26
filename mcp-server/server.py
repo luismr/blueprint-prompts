@@ -40,13 +40,12 @@ def process_file(file_path, folder, mcp):
     tool_func = make_tool(str(file_path))
     tool_func.__name__ = f"{folder}_{filename_token}"
     
-    mcp.add_tool(
-        tool_func,
-        name=tool_name,
-        description=description,
-        tags=tags,
-        annotations=None,
-    )
+    # Add required metadata attributes that FastMCP expects
+    tool_func.key = filename_token
+    tool_func.description = description
+    tool_func.tags = tags
+    
+    mcp.add_tool(tool_func)
 
 def register_md_tools(mcp):
     prompts_dir = Path(__file__).parent / "prompts"
