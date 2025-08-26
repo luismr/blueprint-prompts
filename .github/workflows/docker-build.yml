@@ -30,8 +30,13 @@ jobs:
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Extracted version: $VERSION"
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -44,6 +49,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./mcp-server
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }}
@@ -56,6 +62,6 @@ jobs:
 
       - name: Output image info
         run: |
-          echo "Successfully built and pushed:"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }}"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
+          echo "Successfully built and pushed multi-platform images:"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest (linux/amd64, linux/arm64)"

@@ -65,11 +65,13 @@ The workflow triggers on tag pushes that match the pattern `v*` but excludes any
 ### What it does
 
 1. **Extracts version**: Removes the `v` prefix from the tag (e.g., `v1.2.3` → `1.2.3`)
-2. **Builds Docker image**: Uses the `mcp-server/Dockerfile` as build context
+2. **Builds multi-platform Docker image**: Uses the `mcp-server/Dockerfile` as build context
+   - Supports `linux/amd64` (Intel/AMD processors)
+   - Supports `linux/arm64` (Apple Silicon, ARM servers)
 3. **Tags images**: Creates two tags:
    - `luismachadoreis/the-pudim-blueprint-prompts:X.Y.Z` (version-specific)
    - `luismachadoreis/the-pudim-blueprint-prompts:latest` (latest)
-4. **Pushes to DockerHub**: Automatically publishes the images
+4. **Pushes to DockerHub**: Automatically publishes the multi-platform images
 
 ### Required Secrets
 
@@ -119,6 +121,7 @@ After successful execution, you'll have these images available on DockerHub:
 - **Permission denied**: Ensure the workflow has `packages: write` permission
 - **Authentication failed**: Verify your DockerHub credentials are correct
 - **Build fails**: Check the `mcp-server/Dockerfile` and ensure all dependencies are available
+- **Platform compatibility**: Images are built for both `linux/amd64` and `linux/arm64` architectures
 
 ---
 
