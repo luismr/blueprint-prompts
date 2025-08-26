@@ -66,6 +66,7 @@ This repository serves as a base of prompt examples that guide AI coding assista
 - [TypeScript with Vite, Jest, Vue, and Nuxt](typescript/typescript-vite-with-jest-vue-and-nuxt.md) - Guide for Vue.js and Nuxt.js development
 - [TypeScript with Vite, Angular, Jasmine, and Karma](typescript/typescript-vite-with-angular-jasmine-karma.md) - Guide for Angular development
 - [TypeScript with Node.js, Express, and Jest](typescript/typescript-node-with-jest-express.md) - Guide for backend development
+- [TypeScript React + Vite + Vitest + shadcn](typescript/vite-with-vitest-react-and-shadcn.md) - Modern React setup with Vite, Vitest, shadcn/ui, and CalculatorAdvanced component
 
 ### [Java](java/README.md)
 - [Maven with JUnit](java/java-maven-with-junit.md) - Guide for setting up Java projects with Maven and JUnit 5
