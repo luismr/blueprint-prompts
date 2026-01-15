@@ -36,6 +36,7 @@ For more details and advanced usage, see the [MCP Server README](mcp-server/READ
   - [TypeScript](#typescript)
   - [Java](#java)
   - [GitHub](#github)
+  - [Engineering](#engineering)
 - [How to Use](#how-to-use)
 - [Contributing](#contributing)
   - [Contribution Guidelines](#contribution-guidelines)
@@ -75,6 +76,9 @@ This repository serves as a base of prompt examples that guide AI coding assista
 ### [GitHub](github/README.md)
 - [Basic Pull Request](github/pull-request-basic.md) - Template for creating standard pull requests
 - [Issue Tracker Pull Request](github/pull-request-issue-tracker.md) - Template for pull requests linked to issue tracking
+
+### [Engineering](engineering/README.md)
+- [Code Review - SOLID & DRY](engineering/code-review-solid-dry.md) - Comprehensive prompt for Principal Engineers to perform thorough PR code reviews with multi-language support
 
 ### Coming Soon
 - Java 21 with SpringBoot 3.4 and Maven
