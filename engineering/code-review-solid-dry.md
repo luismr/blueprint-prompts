@@ -156,12 +156,12 @@ Sort issues from **⛔️ Blocker → 🔵 Minor**.
 
 ## Issues Summary
 
-| Type | Issue Short Description | Severity    |
-| ---- | ----------------------- | ----------- |
-| ⛔️   | ...                     | ⛔️ Blocker  |
-| 🔴   | ...                     | 🔴 Critical |
-| 🟡   | ...                     | 🟡 Major    |
-| 🔵   | ...                     | 🔵 Minor    |
+| Type | Issue Short Description | Severity |
+| ---- | ----------------------- | -------- |
+| ⛔️   | ...                     | Blocker  |
+| 🔴   | ...                     | Critical |
+| 🟡   | ...                     | Major    |
+| 🔵   | ...                     | Minor    |
 
 ## What is good
 
