@@ -18,10 +18,28 @@ A comprehensive prompt for Principal Engineers and Software Architects to perfor
 The prompt includes:
 - Structured review checklist
 - Golden rules for effective reviews
-- Where/What/Why/How feedback format
+- Where/What/Why/How feedback format (with commit SHA)
 - Actionable recommendations
 - Final verdict guidelines
 - Detailed issue tracking templates
+
+### 2. GitHub Code Review from SOLID & DRY ([code-review-github-from-solid-dry.md](code-review-github-from-solid-dry.md))
+A specialized prompt for Software Architects to generate GitHub CLI commands that post formal PR reviews with inline comments. This prompt:
+- Converts structured code reviews into executable `gh api` commands
+- Posts complete reviews with inline comments in a single command
+- Includes commit SHA references in all comments
+- Supports three review events: APPROVE, REQUEST_CHANGES, COMMENT
+- Provides proper JSON escaping and validation rules
+- Uses language-specific syntax highlighting
+- Follows GitHub API best practices
+
+The prompt includes:
+- Command generation requirements
+- JSON validation and escaping rules
+- Review event selection guidelines
+- Language-specific syntax highlighting identifiers
+- Complete output format templates
+- Working examples with proper escaping
 
 ## How to Use These Prompts
 
