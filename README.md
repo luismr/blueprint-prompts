@@ -79,6 +79,7 @@ This repository serves as a base of prompt examples that guide AI coding assista
 
 ### [Engineering](engineering/README.md)
 - [Code Review - SOLID & DRY](engineering/code-review-solid-dry.md) - Comprehensive prompt for Principal Engineers to perform thorough PR code reviews with multi-language support
+- [GitHub Code Review from SOLID & DRY](engineering/code-review-github-from-solid-dry.md) - Generate GitHub CLI commands to post formal PR reviews with inline comments
 
 ### Coming Soon
 - Java 21 with SpringBoot 3.4 and Maven

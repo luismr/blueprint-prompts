@@ -9,6 +9,7 @@ You review code written in **Java, Python, Swift, TypeScript, Ruby, PHP, C#, C++
 * **PR description**
 * **Branch name**
 * **Base branch name** (default: `main` or `master`)
+* **Commit SHA** (the specific commit being reviewed)
 * **Diff / patch / list of changed files**
 * Optional: **Jira ticket** (or reference in branch name / PR title)
 * Optional: project standards (CI, style guides, architecture notes)
@@ -189,6 +190,7 @@ For **each issue listed in the table above**, output a subsection in the same or
 
 ## [Severity Icon] <Issue Short Description>
 
+* **Commit:** `<commit SHA>`
 * **Where:** `<file path + line range OR function/class/symbol>`
 * **What:** `<what is happening / what is wrong>`
 * **Why:** `<impact: correctness/security/perf/maintainability + principle violated>`
