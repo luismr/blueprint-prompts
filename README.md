@@ -26,10 +26,13 @@ npx mcp-install http://localhost:9000/sse
 
 For more details and advanced usage, see the [MCP Server README](mcp-server/README.md).
 
+> **⚠️ Important:** When configuring the MCP server in your `mcp.json`, choose a short server name to avoid exceeding the 60-character tool name limit. The server name becomes a prefix for all tool names. See the [MCP Configuration Guide](MCP-CONFIGURATION.md) for detailed examples and recommendations.
+
 ## Index
 
 - [Description](#description)
 - [Quick Start: Run MCP Server from Docker Hub](#-quick-start-run-mcp-server-from-docker-hub)
+- [MCP Configuration Guide](MCP-CONFIGURATION.md) - **Important:** Server name length limits
 - [Purpose](#purpose)
 - [Available Blueprints](#available-blueprints)
   - [Python](#python)
@@ -39,6 +42,7 @@ For more details and advanced usage, see the [MCP Server README](mcp-server/READ
   - [Engineering](#engineering)
 - [How to Use](#how-to-use)
 - [Contributing](#contributing)
+  - [Git Hooks Installation](.github/scripts/install-git-hooks.sh) - Automatic validation
   - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -106,23 +110,29 @@ We welcome contributions to expand this collection of prompts! Here's how you ca
    cd blueprint-prompts
    ```
 
-2. Create a new branch for your contribution:
+2. **Install git hooks** (recommended for contributors):
+   ```bash
+   bash .github/scripts/install-git-hooks.sh
+   ```
+   This installs pre-commit and pre-push hooks that automatically validate your changes.
+
+3. Create a new branch for your contribution:
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-3. Add your prompt following the existing structure
-4. Commit your changes:
+4. Add your prompt following the existing structure
+5. Commit your changes (validation runs automatically if hooks are installed):
    ```bash
    git commit -m "Add: Description of your contribution"
    ```
 
-5. Push to your fork:
+6. Push to your fork (validation runs automatically if hooks are installed):
    ```bash
    git push origin feature/your-feature-name
    ```
 
-6. Create a Pull Request to the main repository
+7. Create a Pull Request to the main repository
 
 ### Contribution Guidelines
 
@@ -132,6 +142,36 @@ We welcome contributions to expand this collection of prompts! Here's how you ca
 - Test the prompts with AI coding assistants
 - Keep the README.md files updated
 - Follow the established format for consistency
+
+#### Validation Requirements
+
+All contributions must pass validation checks that ensure:
+- Every directory has a `README.md` file
+- All `README.md` files link to their respective prompt files
+- Tool names don't exceed 60-character limit (including MCP server prefix)
+- Proper file naming conventions are followed
+
+#### Git Hooks (Recommended)
+
+Install git hooks to automatically run validation:
+```bash
+bash .github/scripts/install-git-hooks.sh
+```
+
+The hooks will:
+- **Pre-commit**: Validate changes before each commit
+- **Pre-push**: Final validation check before pushing
+
+To run validation manually:
+```bash
+bash .github/scripts/validate-readme.sh
+```
+
+To bypass hooks (not recommended):
+```bash
+git commit --no-verify
+git push --no-verify
+```
 
 ## License
 
