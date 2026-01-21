@@ -16,6 +16,21 @@ jobs:
     permissions:
       contents: read
       packages: write
+    strategy:
+      matrix:
+        include:
+          - name: "MCP Server"
+            context: "./mcp-server"
+            dockerfile: "./mcp-server/Dockerfile"
+            tags-suffix: ""
+            build-args: |
+              PROMPTS_REPO=https://github.com/luismr/blueprint-prompts.git
+              PROMPTS_BRANCH=${{ github.ref_name }}
+          - name: "MCP Site"
+            context: "."
+            dockerfile: "./mcp-site/Dockerfile"
+            tags-suffix: "site-"
+            build-args: ""
     
     steps:
       - name: Checkout repository
@@ -45,40 +60,22 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push MCP Server Docker image
+      - name: Build and push ${{ matrix.name }} Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./mcp-server
+          context: ${{ matrix.context }}
+          file: ${{ matrix.dockerfile }}
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: |
-            PROMPTS_REPO=https://github.com/luismr/blueprint-prompts.git
-            PROMPTS_BRANCH=${{ github.ref_name }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tags-suffix }}${{ steps.extract_version.outputs.version }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tags-suffix }}latest
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.name }}
+          build-args: ${{ matrix.build-args }}
 
-      - name: Build and push MCP Site Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./mcp-site/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-${{ steps.extract_version.outputs.version }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Output image info
+      - name: Output ${{ matrix.name }} image info
         run: |
-          echo "Successfully built and pushed multi-platform images:"
-          echo "MCP Server:"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest (linux/amd64, linux/arm64)"
-          echo "MCP Site:"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
-          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-latest (linux/amd64, linux/arm64)"
+          echo "Successfully built and pushed ${{ matrix.name }} multi-platform images:"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tags-suffix }}${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.tags-suffix }}latest (linux/amd64, linux/arm64)"
