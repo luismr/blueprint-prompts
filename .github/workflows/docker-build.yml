@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push MCP Server Docker image
         uses: docker/build-push-action@v5
         with:
           context: ./mcp-server
@@ -60,8 +60,25 @@ jobs:
             PROMPTS_REPO=https://github.com/luismr/blueprint-prompts.git
             PROMPTS_BRANCH=${{ github.ref_name }}
 
+      - name: Build and push MCP Site Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./mcp-site/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-${{ steps.extract_version.outputs.version }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
       - name: Output image info
         run: |
           echo "Successfully built and pushed multi-platform images:"
+          echo "MCP Server:"
           echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
           echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest (linux/amd64, linux/arm64)"
+          echo "MCP Site:"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-${{ steps.extract_version.outputs.version }} (linux/amd64, linux/arm64)"
+          echo "  - ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:site-latest (linux/amd64, linux/arm64)"

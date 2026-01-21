@@ -1,0 +1,502 @@
+{
+  "metadata": {
+    "generatedAt": "2026-01-21T13:50:52.000Z",
+    "totalPrompts": 14,
+    "categories": [
+      {
+        "key": "python",
+        "name": "Python",
+        "icon": "🐍",
+        "color": "bg-blue-500",
+        "count": 2
+      },
+      {
+        "key": "typescript",
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600",
+        "count": 6
+      },
+      {
+        "key": "java",
+        "name": "Java",
+        "icon": "☕",
+        "color": "bg-orange-500",
+        "count": 2
+      },
+      {
+        "key": "github",
+        "name": "GitHub",
+        "icon": "🐙",
+        "color": "bg-gray-700",
+        "count": 2
+      },
+      {
+        "key": "engineering",
+        "name": "Engineering",
+        "icon": "⚙️",
+        "color": "bg-green-500",
+        "count": 2
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "id": "engineering_code_review_github_cli",
+      "filename": "code-review-github-cli.md",
+      "category": "engineering",
+      "path": "../engineering/code-review-github-cli.md",
+      "title": "",
+      "description": "You are a **Software Architect** generating **GitHub CLI commands** to post formal PR reviews with inline comments.\nYour task is to convert a structured code review into executable `gh api` commands.",
+      "promptPreview": "",
+      "examples": [],
+      "useCases": [],
+      "tags": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Java",
+        "GitHub"
+      ],
+      "wordCount": 1355,
+      "lastModified": "2026-01-21T12:32:17.848Z",
+      "categoryInfo": {
+        "name": "Engineering",
+        "icon": "⚙️",
+        "color": "bg-green-500"
+      }
+    },
+    {
+      "id": "engineering_code_review_solid_dry",
+      "filename": "code-review-solid-dry.md",
+      "category": "engineering",
+      "path": "../engineering/code-review-solid-dry.md",
+      "title": "Code Review Comment",
+      "description": "You are a **Principal Software Engineer + Software Architect** performing a **pull request code review**.\nYou review code written in **Java, Python, Swift, TypeScript, Ruby, PHP, C#, C++, and C**.",
+      "promptPreview": "",
+      "examples": [],
+      "useCases": [],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Python",
+        "Java"
+      ],
+      "wordCount": 1042,
+      "lastModified": "2026-01-16T22:39:00.442Z",
+      "categoryInfo": {
+        "name": "Engineering",
+        "icon": "⚙️",
+        "color": "bg-green-500"
+      }
+    },
+    {
+      "id": "github_pull_request_basic",
+      "filename": "pull-request-basic.md",
+      "category": "github",
+      "path": "../github/pull-request-basic.md",
+      "title": "Create a Github Pull Request",
+      "description": "Creates a well-structured pull request description by analyzing your recent code changes. The prompt takes your git history and diffs as input and generates a comprehensive pull request that follows best practices.\n\nThe generated pull request will include:\n- Clear summary of changes\n- Detailed list ...",
+      "promptPreview": "Please create a pull request for my recent changes using the template below. \n\n- First, fetch the latest git log and diffs, then generate a pull request description based on those changes.\n- Fill in all relevant sections of the template with details from my latest commit(s), including a summary of the changes, motivation, and any other required information.\n- Follow the section structure and headings as defined in the template.\n- Ensure the pull request is clear, concise, and ready for review.\n-...",
+      "examples": [
+        "Create a pull request for my recent refactoring changes",
+        "Generate a PR description for my bug fix commits",
+        "Make a pull request for my new feature implementation"
+      ],
+      "useCases": [],
+      "tags": [
+        "GitHub"
+      ],
+      "wordCount": 241,
+      "lastModified": "2026-01-16T22:04:21.683Z",
+      "categoryInfo": {
+        "name": "GitHub",
+        "icon": "🐙",
+        "color": "bg-gray-700"
+      }
+    },
+    {
+      "id": "github_pull_request_issue_tracker",
+      "filename": "pull-request-issue-tracker.md",
+      "category": "github",
+      "path": "../github/pull-request-issue-tracker.md",
+      "title": "Create a Github Pull Request with issue tracker support",
+      "description": "Generates a comprehensive pull request description by analyzing git history and issue tracker data.\nThe prompt takes your recent code changes and linked tickets as input to create a well-structured PR that follows best practices and maintains requirements traceability.\n\nThe generated pull request wi...",
+      "promptPreview": "Please create a pull request for my recent changes using the template below. \n\n- First, fetch the latest git log and diffs, then generate a pull request description based on those changes.\n- Prefix the pull request title with the ticket ID in square brackets (e.g., [DEV-123456] Pull request title).\n- Fill in all relevant sections of the template with details from my latest commit(s) and the linked issue, including a summary of the changes, motivation, ticket description, acceptance criteria, and...",
+      "examples": [
+        "Create a pull request for my feature branch with linked JIRA ticket DEV-123",
+        "Generate a PR description from my commits and reference Trello card TR-456 ",
+        "Make a pull request that links to Azure DevOps work item #789",
+        "Create a PR with GitHub issue #42 details included",
+        "Generate a pull request description with Asana task details"
+      ],
+      "useCases": [],
+      "tags": [
+        "GitHub"
+      ],
+      "wordCount": 320,
+      "lastModified": "2026-01-16T22:04:21.683Z",
+      "categoryInfo": {
+        "name": "GitHub",
+        "icon": "🐙",
+        "color": "bg-gray-700"
+      }
+    },
+    {
+      "id": "java_maven_with_junit",
+      "filename": "maven-with-junit.md",
+      "category": "java",
+      "path": "../java/maven-with-junit.md",
+      "title": "Create a Maven Project with JUnit 5",
+      "description": "Creates a well-structured Maven project with JUnit 5 testing framework by generating a complete project structure that follows Maven conventions and best practices. The prompt sets up essential configurations and dependencies needed for Java development with comprehensive testing capabilities.\n\nThe ...",
+      "promptPreview": "A Maven project with JUnit 5 provides a standard Java project setup that follows Maven conventions and best practices for Java development. It includes JUnit 5 for testing and other essential dependencies for building robust Java applications.\n\nKey characteristics of a Maven project with JUnit 5 include:\n\n- Standard Maven directory structure\n- Basic configuration files (pom.xml, .gitignore)\n- Testing setup with JUnit 5\n- Code coverage with JaCoCo\n- Logging with SLF4J\n- Continuous Integration sup...",
+      "examples": [
+        "Create a new Maven project for my Java application with JUnit tests",
+        "Generate a Maven project structure with testing capabilities",
+        "Set up a Java project with Maven and JUnit 5 testing",
+        "Create a Maven project template with code coverage and logging"
+      ],
+      "useCases": [
+        "Start a new Java project with Maven build system",
+        "Set up automated testing with JUnit 5 framework",
+        "Follow Maven conventions and best practices",
+        "Include essential development tools and dependencies",
+        "Create a maintainable and well-structured project"
+      ],
+      "tags": [
+        "JUnit",
+        "Maven",
+        "CI/CD",
+        "Java",
+        "GitHub"
+      ],
+      "wordCount": 1047,
+      "lastModified": "2026-01-16T22:04:21.684Z",
+      "categoryInfo": {
+        "name": "Java",
+        "icon": "☕",
+        "color": "bg-orange-500"
+      }
+    },
+    {
+      "id": "java_maven_with_lombok_and_junit",
+      "filename": "maven-with-lombok-and-junit.md",
+      "category": "java",
+      "path": "../java/maven-with-lombok-and-junit.md",
+      "title": "Create a Maven Project with Lombok and JUnit 5",
+      "description": "Creates a well-structured Maven project with Lombok and JUnit 5 by generating a complete project structure that follows Maven conventions and best practices. The prompt sets up essential configurations and dependencies needed for Java development with comprehensive testing capabilities and reduced b...",
+      "promptPreview": "A Maven project with Lombok and JUnit 5 provides a standard Java project setup that follows Maven conventions and best practices for Java development. It includes Lombok for reducing boilerplate code, JUnit 5 for testing, and other essential dependencies for building robust Java applications.\n\nKey characteristics of a Maven project with Lombok and JUnit 5 include:\n\n- Standard Maven directory structure\n- Basic configuration files (pom.xml, .gitignore)\n- Lombok annotations for reduced boilerplate\n...",
+      "examples": [
+        "Create a new Maven project with Lombok and JUnit tests",
+        "Generate a Maven project structure with Lombok and testing",
+        "Set up a Java project using Lombok and JUnit 5",
+        "Create a Maven project template with code coverage and reduced boilerplate"
+      ],
+      "useCases": [
+        "Start a new Java project with Maven build system",
+        "Reduce boilerplate code using Lombok",
+        "Set up automated testing with JUnit 5",
+        "Follow Maven conventions and best practices",
+        "Include essential development tools and dependencies",
+        "Create a maintainable and well-structured project"
+      ],
+      "tags": [
+        "JUnit",
+        "Maven",
+        "Lombok",
+        "CI/CD",
+        "Java",
+        "GitHub"
+      ],
+      "wordCount": 1252,
+      "lastModified": "2026-01-16T22:04:21.684Z",
+      "categoryInfo": {
+        "name": "Java",
+        "icon": "☕",
+        "color": "bg-orange-500"
+      }
+    },
+    {
+      "id": "python_essentials",
+      "filename": "essentials.md",
+      "category": "python",
+      "path": "../python/essentials.md",
+      "title": "Create a Vanilla Python Project",
+      "description": "Creates a well-structured vanilla Python project by generating a complete project structure that follows Python best practices and conventions. The prompt sets up essential files and configurations needed for Python development without specialized frameworks or complex dependencies.\n\nThe generated p...",
+      "promptPreview": "A vanilla Python project is a basic, minimal Python project setup that follows standard Python development practices and conventions. It provides a clean foundation for building Python applications without any specialized frameworks or complex dependencies.\n\nKey characteristics of a vanilla Python project include:\n\n- Standard directory structure following Python packaging conventions\n- Basic configuration files (.gitignore, requirements.txt, etc.)\n- Testing setup with pytest or unittest\n- Code q...",
+      "examples": [
+        "Create a new vanilla Python project structure",
+        "Generate a basic Python project template",
+        "Set up a minimal Python development environment",
+        "Create a Python project with standard best practices"
+      ],
+      "useCases": [
+        "Start a new Python project from scratch",
+        "Follow Python development best practices",
+        "Set up a maintainable project structure",
+        "Include essential development tools",
+        "Create a clean foundation for Python applications",
+        "Enable future extensibility with additional tools"
+      ],
+      "tags": [
+        "DDD",
+        "CI/CD",
+        "Python",
+        "GitHub"
+      ],
+      "wordCount": 1439,
+      "lastModified": "2026-01-16T22:04:21.685Z",
+      "categoryInfo": {
+        "name": "Python",
+        "icon": "🐍",
+        "color": "bg-blue-500"
+      }
+    },
+    {
+      "id": "python_essentials_ddd",
+      "filename": "essentials-ddd.md",
+      "category": "python",
+      "path": "../python/essentials-ddd.md",
+      "title": "Create Python Project Blueprint with Domain-Driven Design (DDD)",
+      "description": "Creates a comprehensive Python project structure following Domain-Driven Design (DDD) principles by generating a complete project blueprint with clear separation of concerns and domain-focused architecture. The prompt sets up essential folders, files, and configurations needed for building maintaina...",
+      "promptPreview": "This blueprint provides a foundation for a Python project using Domain-Driven Design principles, with a clear separation of concerns and a structured approach to development. It extends the basic Python project blueprint to include a Domain-Driven Design (DDD) structure, with folders separated by features and detailed folder contents for each feature.\n\nKey characteristics of a Python DDD project include:\n\n- Strategic Design patterns:\n  - Bounded Contexts to define clear boundaries between differ...",
+      "examples": [
+        "Create a new Python DDD project structure for my application",
+        "Generate a domain-driven design blueprint in Python",
+        "Set up a Python project following DDD principles",
+        "Create a Python project template with domain-driven architecture"
+      ],
+      "useCases": [
+        "Start a new Python project using DDD",
+        "Structure complex business domains",
+        "Follow clean architecture principles",
+        "Create maintainable domain-centric applications",
+        "Set up a scalable project foundation",
+        "Enable team collaboration through shared models"
+      ],
+      "tags": [
+        "DDD",
+        "Python",
+        "GitHub"
+      ],
+      "wordCount": 1955,
+      "lastModified": "2026-01-16T22:04:21.685Z",
+      "categoryInfo": {
+        "name": "Python",
+        "icon": "🐍",
+        "color": "bg-blue-500"
+      }
+    },
+    {
+      "id": "typescript_node_with_jest_express",
+      "filename": "node-with-jest-express.md",
+      "category": "typescript",
+      "path": "../typescript/node-with-jest-express.md",
+      "title": "Create TypeScript Express API Project with ts-node and Jest",
+      "description": "Creates a well-structured TypeScript Express API project with ts-node and Jest by generating a complete project structure that follows TypeScript and Express.js best practices. The prompt sets up essential configurations and dependencies needed for building robust APIs with comprehensive testing cap...",
+      "promptPreview": "This blueprint provides a foundation for building a TypeScript Express API using ts-node for development and Jest for testing. It follows best practices for TypeScript development and includes essential configurations and dependencies.\n\nKey characteristics of a TypeScript Express API project include:\n\n- TypeScript configuration and type safety\n- Express.js web framework setup\n- API routing and controllers\n- Swagger API documentation\n- Testing with Jest\n- Development tools (ts-node, ts-node-dev)\n...",
+      "examples": [
+        "Create a new TypeScript Express API project with testing",
+        "Generate an Express API template with TypeScript and Jest",
+        "Set up a Node.js API using TypeScript and Express",
+        "Create a REST API project with TypeScript testing"
+      ],
+      "useCases": [
+        "Start a new API project with TypeScript",
+        "Set up automated testing with Jest",
+        "Follow Express.js best practices",
+        "Include essential API development tools",
+        "Create maintainable and documented APIs",
+        "Enable type-safe development"
+      ],
+      "tags": [
+        "Node.js",
+        "Express",
+        "Jest",
+        "TypeScript"
+      ],
+      "wordCount": 4180,
+      "lastModified": "2026-01-16T22:04:21.686Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    },
+    {
+      "id": "typescript_vite_with_angular_jasmine_karma",
+      "filename": "vite-with-angular-jasmine-karma.md",
+      "category": "typescript",
+      "path": "../typescript/vite-with-angular-jasmine-karma.md",
+      "title": "Create TypeScript Project with Angular and Vite",
+      "description": "Creates a well-structured TypeScript project with Angular and Vite by generating a complete project structure that follows Angular best practices. The prompt sets up essential configurations and dependencies needed for building robust Angular applications with comprehensive testing capabilities usin...",
+      "promptPreview": "This blueprint provides a foundation for building a TypeScript application using Angular and Vite, with Jasmine and Karma for testing. It follows best practices for Angular development and includes essential configurations and dependencies.\n\nKey characteristics of a TypeScript Angular project include:\n\n- Angular framework and components\n- Vite build tooling and dev server\n- TypeScript configuration and type safety\n- Testing with Jasmine and Karma\n- SCSS styling support\n- VS Code debugging suppor...",
+      "examples": [
+        "Create a new Angular project with Vite and testing",
+        "Generate an Angular template with Jasmine tests",
+        "Set up a TypeScript project using Angular and Vite",
+        "Create an Angular application with Karma testing"
+      ],
+      "useCases": [
+        "Start a new Angular project with Vite",
+        "Set up automated testing with Jasmine",
+        "Follow Angular best practices",
+        "Include essential development tools",
+        "Create maintainable component architecture",
+        "Enable type-safe development"
+      ],
+      "tags": [
+        "Angular",
+        "Vite",
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "GitHub"
+      ],
+      "wordCount": 3387,
+      "lastModified": "2026-01-16T22:04:21.686Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    },
+    {
+      "id": "typescript_vite_with_jest_and_react",
+      "filename": "vite-with-jest-and-react.md",
+      "category": "typescript",
+      "path": "../typescript/vite-with-jest-and-react.md",
+      "title": "Create TypeScript Project with React, Vite and Jest",
+      "description": "Creates a well-structured TypeScript project with React and Vite by generating a complete project structure that follows React best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust React applications with comprehensive testing capabil...",
+      "promptPreview": "This blueprint provides a foundation for building a TypeScript application using React and Vite, with Jest for testing. It follows best practices for React development and includes essential configurations and dependencies.\n\nKey characteristics of a TypeScript React project include:\n\n- React components and hooks\n- Vite build tooling and dev server\n- TypeScript configuration and type safety\n- Testing with Jest and React Testing Library\n- Component-based architecture\n- VS Code debugging support\n- ...",
+      "examples": [
+        "Create a new React project with Vite and testing",
+        "Generate a React template with Jest tests",
+        "Set up a TypeScript project using React and Vite",
+        "Create a React application with Jest testing"
+      ],
+      "useCases": [
+        "Start a new React project with Vite",
+        "Set up automated testing with Jest",
+        "Follow React best practices",
+        "Include essential development tools",
+        "Create maintainable component architecture",
+        "Enable type-safe development"
+      ],
+      "tags": [
+        "React",
+        "Node.js",
+        "Vite",
+        "Jest",
+        "TypeScript"
+      ],
+      "wordCount": 2381,
+      "lastModified": "2026-01-16T22:04:21.686Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    },
+    {
+      "id": "typescript_vite_with_jest_vue_and_nuxt",
+      "filename": "vite-with-jest-vue-and-nuxt.md",
+      "category": "typescript",
+      "path": "../typescript/vite-with-jest-vue-and-nuxt.md",
+      "title": "Create TypeScript Project with Vue/Nuxt, Vite and Jest",
+      "description": "Creates a well-structured TypeScript project with Vue/Nuxt and Vite by generating a complete project structure that follows Vue and Nuxt best practices. The prompt sets up essential configurations and dependencies needed for building robust Vue/Nuxt applications with comprehensive testing capabiliti...",
+      "promptPreview": "This blueprint provides a foundation for building a TypeScript application using Vue/Nuxt and Vite, with Jest for testing. It follows best practices for Vue development and includes essential configurations and dependencies.\n\nKey characteristics of a TypeScript Vue/Nuxt project include:\n\n- Vue components and composables\n- Nuxt framework features\n- Vite build tooling and dev server\n- TypeScript configuration and type safety\n- Testing with Jest and Vue Test Utils\n- Component-based architecture\n- V...",
+      "examples": [
+        "Create a new Vue/Nuxt project with Vite and testing",
+        "Generate a Vue template with Jest tests",
+        "Set up a TypeScript project using Nuxt and Vite",
+        "Create a Vue application with Jest testing"
+      ],
+      "useCases": [
+        "Start a new Vue/Nuxt project with Vite",
+        "Set up automated testing with Jest",
+        "Follow Vue/Nuxt best practices",
+        "Include essential development tools",
+        "Create maintainable component architecture",
+        "Enable type-safe development"
+      ],
+      "tags": [
+        "Vue",
+        "Node.js",
+        "Vite",
+        "Jest",
+        "TypeScript",
+        "JavaScript",
+        "Java"
+      ],
+      "wordCount": 2621,
+      "lastModified": "2026-01-16T22:04:21.686Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    },
+    {
+      "id": "typescript_vite_with_jest",
+      "filename": "vite-with-jest.md",
+      "category": "typescript",
+      "path": "../typescript/vite-with-jest.md",
+      "title": "TypeScript Project Setup with Vite and Jest",
+      "description": "Creates a well-structured TypeScript project with Vite by generating a complete project structure that follows TypeScript best practices and conventions. The prompt sets up essential configurations and dependencies needed for building robust TypeScript applications with comprehensive testing capabil...",
+      "promptPreview": "Create a new TypeScript project with the following specifications:",
+      "examples": [
+        "Create a new TypeScript project with Vite and testing",
+        "Generate a TypeScript template with Jest tests",
+        "Set up a minimal TypeScript project using Vite",
+        "Create a TypeScript application with Jest testing"
+      ],
+      "useCases": [
+        "Start a new TypeScript project with Vite",
+        "Set up automated testing with Jest",
+        "Follow TypeScript best practices",
+        "Include essential development tools",
+        "Create maintainable code architecture",
+        "Enable type-safe development"
+      ],
+      "tags": [
+        "Node.js",
+        "Vite",
+        "Jest",
+        "TypeScript"
+      ],
+      "wordCount": 1373,
+      "lastModified": "2026-01-16T22:04:21.686Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    },
+    {
+      "id": "typescript_vite_with_vitest_react_shadcn",
+      "filename": "vite-with-vitest-react-shadcn.md",
+      "category": "typescript",
+      "path": "../typescript/vite-with-vitest-react-shadcn.md",
+      "title": "TypeScript React + Vite + Vitest + shadcn (Node 24)",
+      "description": "A conversion of your Jest-based blueprint to **Node 24**, **TypeScript 5.9**, **Vite**, **Vitest (with coverage)**, and **shadcn/ui**. It preserves the same structure and examples, with modern configs and scripts.",
+      "promptPreview": "",
+      "examples": [],
+      "useCases": [],
+      "tags": [
+        "React",
+        "Node.js",
+        "Vite",
+        "Jest",
+        "TypeScript"
+      ],
+      "wordCount": 5451,
+      "lastModified": "2026-01-21T12:32:17.849Z",
+      "categoryInfo": {
+        "name": "TypeScript",
+        "icon": "📘",
+        "color": "bg-blue-600"
+      }
+    }
+  ]
+}
