@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mcp-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mcp-portal.rule=Host(`mcp-portal.localhost`)"
+      - "traefik.http.services.mcp-portal.loadbalancer.server.port=80"
+
+networks:
+  default:
+    name: mcp-network
