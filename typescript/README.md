@@ -67,7 +67,7 @@ A comprehensive guide for backend development with TypeScript. This prompt cover
 - TypeScript backend best practices
 - REST API development patterns
 
-### 6. TypeScript React + Vite + Vitest + shadcn ([vite-with-vitest-react-and-shadcn.md](vite-with-vitest-react-and-shadcn.md))
+### 6. TypeScript React + Vite + Vitest + shadcn ([vite-with-vitest-react-4d195db.md](vite-with-vitest-react-4d195db.md))
 A modern guide for React development with TypeScript, Vite, Vitest, and shadcn/ui. This prompt includes:
 - React setup with TypeScript and Vite
 - Vitest testing framework (Jest alternative)

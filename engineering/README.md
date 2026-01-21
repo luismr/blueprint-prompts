@@ -23,7 +23,7 @@ The prompt includes:
 - Final verdict guidelines
 - Detailed issue tracking templates
 
-### 2. GitHub Code Review from SOLID & DRY ([code-review-github-from-solid-dry.md](code-review-github-from-solid-dry.md))
+### 2. GitHub Code Review from SOLID & DRY ([code-review-github-fro97275be.md](code-review-github-fro97275be.md))
 A specialized prompt for Software Architects to generate GitHub CLI commands that post formal PR reviews with inline comments. This prompt:
 - Converts structured code reviews into executable `gh api` commands
 - Posts complete reviews with inline comments in a single command

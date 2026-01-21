@@ -63,4 +63,42 @@ Once the server is running, you can install it in Cursor using:
 npx mcp-install http://localhost:9000/sse
 ```
 
-This will connect your local Cursor instance to the running MCP server. 
+This will connect your local Cursor instance to the running MCP server.
+
+## Important: Tool Name Length Limits
+
+### MCP Server Name Impact
+
+When configuring this MCP server in your `mcp.json` configuration file, be aware that the server name you choose will be used as a prefix for all tool names. This affects the total character count for tool names, which have a 60-character limit in most MCP clients.
+
+**Tool Name Format:** `{server-name}:{folder}_{snake_case_filename}`
+
+### Example
+
+If you configure the server in your `mcp.json` as:
+
+```json
+{
+  "mcpServers": {
+    "blueprint-prompts": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/sse"]
+    }
+  }
+}
+```
+
+The server name `blueprint-prompts` (18 characters including the colon) will be prefixed to all tool names:
+
+- File: `typescript/vite-with-vitest-react-4d195db.md`
+- Tool name: `blueprint-prompts:typescript_vite_with_vitest_react_4d195db` (59 characters)
+
+### Recommendations
+
+1. **Use short server names** in your `mcp.json` to avoid exceeding the 60-character limit
+2. **Good examples:** `bp`, `prompts`, `blueprints`
+3. **Avoid long names like:** `blueprint-prompts-server`, `my-awesome-blueprint-collection`
+
+### Validation
+
+This repository includes validation to ensure all tool names stay within the 60-character limit when using the default server name `blueprint-prompts`. If you use a different server name, adjust the validation accordingly or ensure your chosen name doesn't cause tool names to exceed 60 characters. 

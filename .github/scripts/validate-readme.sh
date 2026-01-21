@@ -2,6 +2,48 @@
 
 errors=()
 
+# Function to convert filename to snake_case (mimicking Python logic)
+snake_case() {
+  local s="$1"
+  # Replace hyphens with spaces, then spaces with underscores, then lowercase
+  echo "$s" | sed 's/-/ /g' | sed 's/ /_/g' | tr '[:upper:]' '[:lower:]'
+}
+
+# Function to check if tool names would exceed 60 characters
+# Tool names are generated as: {folder}_{snake_case_filename}
+# This matches the logic in mcp-server/server.py line 66
+# Note: MCP clients add server name prefix based on mcp.json configuration
+# WARNING: This validation assumes server name "blueprint-prompts" (18 chars with colon)
+# If you use a different server name in mcp.json, update server_prefix accordingly
+check_tool_name_length() {
+  local dir=$1
+  # Account for MCP server name prefix that clients add (from mcp.json configuration)
+  local server_prefix="blueprint-prompts:"
+  local prefix_length=${#server_prefix}
+  
+  for file in "$dir"/*.md; do
+    # Skip if no .md files found or if it's README.md
+    [[ ! -f "$file" ]] && continue
+    local fname=$(basename "$file")
+    [[ "$fname" == "README.md" ]] && continue
+    
+    # Extract filename without extension
+    local filename_no_ext="${fname%.md}"
+    
+    # Convert to snake_case (mimicking the Python logic)
+    local filename_token=$(snake_case "$filename_no_ext")
+    
+    # Generate tool name: folder_filename_token (matching Python server.py line 66)
+    local tool_name="${dir}_${filename_token}"
+    local full_name="${server_prefix}${tool_name}"
+    
+    # Check if full tool name (with prefix) exceeds 60 characters
+    if [ ${#full_name} -gt 60 ]; then
+      errors+=("❌ Error: Tool name '${tool_name}' with prefix '${server_prefix}' results in '${full_name}' (${#full_name} chars) which exceeds 60 character limit for file $fname")
+    fi
+  done
+}
+
 # Function to check if a directory has a README.md file
 check_readme() {
   local dir=$1
@@ -46,6 +88,7 @@ for dir in */; do
     check_readme "$dir"
     check_root_links "$dir"
     check_folder_links "$dir"
+    check_tool_name_length "$dir"
     echo "✅ $dir validation passed"
   fi
 
