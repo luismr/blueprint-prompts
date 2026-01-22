@@ -3,9 +3,9 @@
 set -e
 
 # Clone prompts repo if not already present
-if [ ! -d "./prompts/.git" ]; then
+if [ ! -d "./repo/.git" ]; then
   echo "Cloning prompts repo..."
-  git clone "$PROMPTS_REPO" prompts
+  git clone "$PROMPTS_REPO" repo
   cd prompts
   git checkout "$PROMPTS_BRANCH"
   cd ..

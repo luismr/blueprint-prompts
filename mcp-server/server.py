@@ -79,7 +79,7 @@ def process_file(file_path, folder, mcp):
 def register_md_tools(mcp):
     # Try multiple directory locations in order of preference
     candidate_dirs = [
-        Path("/app/prompts"),
+        Path("/app/repo/prompts"),
         Path("../prompts").resolve(),
         Path.cwd()
     ]
