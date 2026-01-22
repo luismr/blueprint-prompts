@@ -6,7 +6,7 @@ set -e
 if [ ! -d "./repo/.git" ]; then
   echo "Cloning prompts repo..."
   git clone "$PROMPTS_REPO" repo
-  cd prompts
+  cd repo
   git checkout "$PROMPTS_BRANCH"
   cd ..
 else
