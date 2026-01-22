@@ -14,11 +14,7 @@ RUN npm install
 COPY mcp-site/ ./
 
 # Copy prompt directories from parent
-COPY python ./prompts/python
-COPY typescript ./prompts/typescript
-COPY java ./prompts/java
-COPY github ./prompts/github
-COPY engineering ./prompts/engineering
+COPY prompts ./prompts
 COPY MCP-CONFIGURATION.md ./prompts/
 COPY README.md ./prompts/
 

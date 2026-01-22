@@ -1,4 +1,4 @@
-# Engineering Prompts Index
+# Engineering Prompts
 
 This directory contains a collection of prompts designed to help you perform engineering tasks following best practices. Each prompt provides detailed guidance and templates for various aspects of software engineering processes.
 

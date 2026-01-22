@@ -13,4 +13,4 @@ else
   echo "Prompts repo already exists. Skipping clone."
 fi
 
-exec fastmcp run server.py --transport sse --host 0.0.0.0 --port 9000 
+exec fastmcp run server.py --transport http --host 0.0.0.0 --port 9000 

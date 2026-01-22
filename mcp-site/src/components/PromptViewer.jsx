@@ -16,18 +16,20 @@ const PromptViewer = ({ prompt, isOpen, onClose }) => {
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-
-  useEffect(() => {
-    if (isOpen && prompt) {
-      fetchPromptContent()
-    }
-  }, [isOpen, prompt])
+  const [copiedSetup, setCopiedSetup] = useState(false)
+  const [copiedContent, setCopiedContent] = useState(false)
 
   const fetchPromptContent = async () => {
     setLoading(true)
     setError(null)
     
     try {
+      // Check if raw content is already available (from prompts.json)
+      if (prompt.rawContent) {
+        setContent(prompt.rawContent)
+        return
+      }
+
       // For the static site, we can't fetch the original files directly
       // So we'll always use the fallback content with enhanced information
       console.log('Loading prompt:', prompt.filename)
@@ -45,7 +47,7 @@ const PromptViewer = ({ prompt, isOpen, onClose }) => {
       // For all other prompts, use enhanced fallback content
       throw new Error('Using fallback content for static deployment')
       
-    } catch (err) {
+    } catch {
       console.log('Using fallback content for:', prompt.filename)
       
       // Create enhanced fallback content
@@ -55,6 +57,13 @@ const PromptViewer = ({ prompt, isOpen, onClose }) => {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    if (isOpen && prompt) {
+      fetchPromptContent()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, prompt])
 
   const createEnhancedFallbackContent = (prompt) => {
     return `# ${prompt.title || prompt.filename.replace('.md', '').replace(/-/g, ' ')}
@@ -107,7 +116,7 @@ Tool Name: ${prompt.category}_${prompt.filename.replace('.md', '').replace(/[^a-
 \`\`\`
 
 **Quick Setup:**
-1. Install in Cursor: \`npx mcp-install https://prompts.luismachadoreis.dev/sse\`
+1. Install in Cursor: \`npx mcp-install https://prompts.luismachadoreis.dev/mcp\`
 2. Use the tool directly in your AI assistant - that's it!
 
 ### Option 2: Local Docker Server
@@ -115,13 +124,13 @@ For local development or offline use:
 
 **Setup Steps:**
 1. Run the MCP server: \`docker run -d -p 9000:9000 luismachadoreis/the-pudim-blueprint-prompts\`
-2. Install in Cursor: \`npx mcp-install http://localhost:9000/sse\`
+2. Install in Cursor: \`npx mcp-install http://localhost:9000/mcp\`
 3. Use the tool directly in your AI assistant
 
 ### Option 3: Direct Repository Access
 Visit the full prompt in the repository:
 - **File**: \`${prompt.category}/${prompt.filename}\`
-- **Repository**: [blueprint-prompts](https://github.com/luismr/blueprint-prompts/tree/main/${prompt.category})
+- **Repository**: [blueprint-prompts](https://github.com/luismr/blueprint-prompts/tree/main/prompts/${prompt.category})
 
 ### Option 4: Manual Usage
 Copy the prompt structure and adapt it to your needs based on the description and examples above.
@@ -135,11 +144,15 @@ Copy the prompt structure and adapt it to your needs based on the description an
 
   const handleCopyContent = () => {
     navigator.clipboard.writeText(content)
+    setCopiedContent(true)
+    setTimeout(() => setCopiedContent(false), 2000)
   }
 
   const handleCopyMCPCommand = () => {
-    const setupCommand = `npx mcp-install https://prompts.luismachadoreis.dev/sse`
+    const setupCommand = `npx mcp-install https://prompts.luismachadoreis.dev/mcp`
     navigator.clipboard.writeText(setupCommand)
+    setCopiedSetup(true)
+    setTimeout(() => setCopiedSetup(false), 2000)
   }
 
   if (!prompt) return null
@@ -163,7 +176,7 @@ Copy the prompt structure and adapt it to your needs based on the description an
                 className="text-xs"
                 title="Copy hosted MCP setup command"
               >
-                ⭐ Setup
+                {copiedSetup ? '✅ Copied!' : '⭐ Setup'}
               </Button>
               <Button
                 variant="outline"
@@ -171,7 +184,7 @@ Copy the prompt structure and adapt it to your needs based on the description an
                 onClick={handleCopyContent}
                 disabled={loading}
               >
-                📄 Copy
+                {copiedContent ? '✅ Copied!' : '📄 Copy'}
               </Button>
             </div>
           </div>
@@ -202,56 +215,56 @@ Copy the prompt structure and adapt it to your needs based on the description an
                 remarkPlugins={[remarkGfm]}
                 components={{
                   // Custom styling for code blocks
-                  code: ({ node, inline, className, children, ...props }) => {
-                    return !inline ? (
+                  code: ({ children, ...props }) => {
+                    return !props.inline ? (
                       <pre className="bg-slate-800 rounded-lg p-4 overflow-x-auto border border-slate-600">
-                        <code className="text-green-400 text-sm" {...props}>
+                        <code className="text-green-400 text-xs" {...props}>
                           {children}
                         </code>
                       </pre>
                     ) : (
-                      <code className="bg-slate-700 px-2 py-1 rounded text-sm text-blue-300" {...props}>
+                      <code className="bg-slate-700 px-2 py-1 rounded text-xs text-blue-300" {...props}>
                         {children}
                       </code>
                     )
                   },
                   // Custom styling for headings
                   h1: ({ children }) => (
-                    <h1 className="text-2xl font-bold mb-4 gradient-text border-b border-slate-600 pb-2">{children}</h1>
+                    <h1 className="text-xl font-bold mb-4 gradient-text border-b border-slate-600 pb-2">{children}</h1>
                   ),
                   h2: ({ children }) => (
-                    <h2 className="text-xl font-semibold mb-3 text-blue-300 mt-6">{children}</h2>
+                    <h2 className="text-lg font-semibold mb-3 text-blue-300 mt-6">{children}</h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-lg font-semibold mb-2 text-blue-400 mt-4">{children}</h3>
+                    <h3 className="text-base font-semibold mb-2 text-blue-400 mt-4">{children}</h3>
                   ),
                   // Custom styling for lists
                   ul: ({ children }) => (
-                    <ul className="list-disc list-inside space-y-1 text-slate-300 ml-4">{children}</ul>
+                    <ul className="list-disc list-inside space-y-1 text-slate-300 ml-4 text-sm">{children}</ul>
                   ),
                   ol: ({ children }) => (
-                    <ol className="list-decimal list-inside space-y-1 text-slate-300 ml-4">{children}</ol>
+                    <ol className="list-decimal list-inside space-y-1 text-slate-300 ml-4 text-sm">{children}</ol>
                   ),
                   // Custom styling for paragraphs
                   p: ({ children }) => (
-                    <p className="text-slate-300 leading-relaxed mb-4">{children}</p>
+                    <p className="text-slate-300 leading-relaxed mb-4 text-sm">{children}</p>
                   ),
                   // Custom styling for blockquotes
                   blockquote: ({ children }) => (
-                    <blockquote className="border-l-4 border-blue-500 pl-4 italic text-slate-400 my-4 bg-slate-800/50 py-2 rounded-r">
+                    <blockquote className="border-l-4 border-blue-500 pl-4 italic text-slate-400 my-4 bg-slate-800/50 py-2 rounded-r text-sm">
                       {children}
                     </blockquote>
                   ),
                   // Custom styling for links
                   a: ({ children, href }) => (
-                    <a href={href} className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">
+                    <a href={href} className="text-blue-400 hover:text-blue-300 underline text-sm" target="_blank" rel="noopener noreferrer">
                       {children}
                     </a>
                   ),
                   // Custom styling for tables
                   table: ({ children }) => (
                     <div className="overflow-x-auto">
-                      <table className="min-w-full border border-slate-600 rounded-lg overflow-hidden">
+                      <table className="min-w-full border border-slate-600 rounded-lg overflow-hidden text-sm">
                         {children}
                       </table>
                     </div>

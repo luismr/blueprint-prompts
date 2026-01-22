@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -33,19 +31,19 @@ function extractMetadata(content, filePath) {
   }
   
   // Extract description from ## Description section
-  const descriptionMatch = content.match(/## Description\n\n(.*?)(?=\n##|\n\n##|\Z)/s);
+  const descriptionMatch = content.match(/## Description\n\n(.*?)(?=\n##|\n\n##|$)/s);
   if (descriptionMatch) {
     description = descriptionMatch[1].trim();
   } else {
     // Fallback to first paragraph after title
-    const firstParagraphMatch = content.match(/# .*?\n\n(.*?)(?=\n##|\Z)/s);
+    const firstParagraphMatch = content.match(/# .*?\n\n(.*?)(?=\n##|$)/s);
     if (firstParagraphMatch) {
       description = firstParagraphMatch[1].trim();
     }
   }
   
   // Extract the actual prompt section
-  const promptMatch = content.match(/## Prompt\n\n(.*?)(?=\n##|\Z)/s);
+  const promptMatch = content.match(/## Prompt\n\n(.*?)(?=\n##|$)/s);
   if (promptMatch) {
     promptSection = promptMatch[1].trim().substring(0, 500) + (promptMatch[1].trim().length > 500 ? '...' : '');
   }
@@ -112,8 +110,9 @@ function scanDirectory(dirPath, category) {
           id: `${category}_${file.replace('.md', '').replace(/[^a-zA-Z0-9]/g, '_')}`,
           filename: file,
           category,
-          path: `../${category}/${file}`,
+          path: `prompts/${category}/${file}`,
           ...metadata,
+          rawContent: content,
           categoryInfo: CATEGORIES[category] || { name: category, icon: '📄', color: 'bg-gray-500' }
         };
         
@@ -137,7 +136,7 @@ function generatePromptsData() {
   const promptsDir = path.join(appDir, 'prompts');
   const rootDir = fs.existsSync(promptsDir) 
     ? promptsDir 
-    : path.resolve(__dirname, '../..');
+    : path.resolve(__dirname, '../../prompts');
   
   console.log('Root directory:', rootDir);
   

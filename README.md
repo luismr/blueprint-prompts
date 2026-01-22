@@ -21,7 +21,7 @@ docker run -d --restart always -p 9000:9000 luismachadoreis/the-pudim-blueprint-
 Once the server is running, install it in Cursor:
 
 ```sh
-npx mcp-install http://localhost:9000/sse
+npx mcp-install http://localhost:9000/mcp
 ```
 
 For more details and advanced usage, see the [MCP Server README](mcp-server/README.md).
@@ -61,29 +61,31 @@ This repository serves as a base of prompt examples that guide AI coding assista
 
 ## Available Blueprints
 
-### [Python](python/README.md)
-- [Python Essentials](python/python-essentials.md) - Complete guide for setting up Python projects with best practices
-- [Python Essentials with DDD](python/python-essentials-ddd.md) - Guide for setting up Python projects using Domain-Driven Design principles
+For a complete list of available prompts, see the [Prompts Directory](prompts/README.md).
 
-### [TypeScript](typescript/README.md)
-- [TypeScript with Vite and Jest](typescript/typescript-vite-with-jest.md) - Guide for setting up TypeScript projects with Vite and Jest
-- [TypeScript with Vite, Jest, and React](typescript/typescript-vite-with-jest-and-react.md) - Guide for React development with TypeScript
-- [TypeScript with Vite, Jest, Vue, and Nuxt](typescript/typescript-vite-with-jest-vue-and-nuxt.md) - Guide for Vue.js and Nuxt.js development
-- [TypeScript with Vite, Angular, Jasmine, and Karma](typescript/typescript-vite-with-angular-jasmine-karma.md) - Guide for Angular development
-- [TypeScript with Node.js, Express, and Jest](typescript/typescript-node-with-jest-express.md) - Guide for backend development
-- [TypeScript React + Vite + Vitest + shadcn](typescript/vite-with-vitest-react-and-shadcn.md) - Modern React setup with Vite, Vitest, shadcn/ui, and CalculatorAdvanced component
+### [Python](prompts/python/README.md)
+- [Python Essentials](prompts/python/essentials.md) - Complete guide for setting up Python projects with best practices
+- [Python Essentials with DDD](prompts/python/essentials-ddd.md) - Guide for setting up Python projects using Domain-Driven Design principles
 
-### [Java](java/README.md)
-- [Maven with JUnit](java/java-maven-with-junit.md) - Guide for setting up Java projects with Maven and JUnit 5
-- [Maven with Lombok and JUnit](java/java-maven-with-lombok-and-junit.md) - Enhanced guide with Lombok integration
+### [TypeScript](prompts/typescript/README.md)
+- [TypeScript with Vite and Jest](prompts/typescript/vite-with-jest.md) - Guide for setting up TypeScript projects with Vite and Jest
+- [TypeScript with Vite, Jest, and React](prompts/typescript/vite-with-jest-and-react.md) - Guide for React development with TypeScript
+- [TypeScript with Vite, Jest, Vue, and Nuxt](prompts/typescript/vite-with-jest-vue-and-nuxt.md) - Guide for Vue.js and Nuxt.js development
+- [TypeScript with Vite, Angular, Jasmine, and Karma](prompts/typescript/vite-with-angular-jasmine-karma.md) - Guide for Angular development
+- [TypeScript with Node.js, Express, and Jest](prompts/typescript/node-with-jest-express.md) - Guide for backend development
+- [TypeScript React + Vite + Vitest + shadcn](prompts/typescript/vite-with-vitest-react-shadcn.md) - Modern React setup with Vite, Vitest, shadcn/ui, and CalculatorAdvanced component
 
-### [GitHub](github/README.md)
-- [Basic Pull Request](github/pull-request-basic.md) - Template for creating standard pull requests
-- [Issue Tracker Pull Request](github/pull-request-issue-tracker.md) - Template for pull requests linked to issue tracking
+### [Java](prompts/java/README.md)
+- [Maven with JUnit](prompts/java/maven-with-junit.md) - Guide for setting up Java projects with Maven and JUnit 5
+- [Maven with Lombok and JUnit](prompts/java/maven-with-lombok-and-junit.md) - Enhanced guide with Lombok integration
 
-### [Engineering](engineering/README.md)
-- [Code Review - SOLID & DRY](engineering/code-review-solid-dry.md) - Comprehensive prompt for Principal Engineers to perform thorough PR code reviews with multi-language support
-- [GitHub Code Review CLI](engineering/code-review-github-cli.md) - Generate GitHub CLI commands to post formal PR reviews with inline comments
+### [GitHub](prompts/github/README.md)
+- [Basic Pull Request](prompts/github/pull-request-basic.md) - Template for creating standard pull requests
+- [Issue Tracker Pull Request](prompts/github/pull-request-issue-tracker.md) - Template for pull requests linked to issue tracking
+
+### [Engineering](prompts/engineering/README.md)
+- [Code Review - SOLID & DRY](prompts/engineering/code-review-solid-dry.md) - Comprehensive prompt for Principal Engineers to perform thorough PR code reviews with multi-language support
+- [GitHub Code Review CLI](prompts/engineering/code-review-github-cli.md) - Generate GitHub CLI commands to post formal PR reviews with inline comments
 
 ### [mcp-site](mcp-site/README.md)
 - Static catalog site for browsing blueprint prompts with React frontend

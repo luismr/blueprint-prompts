@@ -3,9 +3,13 @@ import PromptViewer from './PromptViewer'
 
 const PromptCard = ({ prompt }) => {
   const [isViewerOpen, setIsViewerOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
 
-  const handleCopyPath = () => {
-    navigator.clipboard.writeText(prompt.path)
+  const handleCopyPrompt = (e) => {
+    e.stopPropagation()
+    navigator.clipboard.writeText(prompt.rawContent || prompt.path)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   return (
@@ -41,11 +45,11 @@ const PromptCard = ({ prompt }) => {
             View Prompt
           </button>
           <button 
-            onClick={handleCopyPath}
+            onClick={handleCopyPrompt}
             className="btn-secondary px-3 py-2 text-sm"
-            title="Copy path"
+            title="Copy prompt"
           >
-            📋
+            {copied ? '✅' : '📋'}
           </button>
         </div>
       </div>

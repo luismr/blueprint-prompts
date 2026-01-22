@@ -1,16 +1,13 @@
 from fastmcp import FastMCP
+from fastmcp.server.lifespan import lifespan
 from fastmcp.tools import Tool
+from fastmcp.utilities.logging import get_logger
 from pathlib import Path
-import logging
 import os
 import re
 
 # Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 def snake_case(s):
     s = s.replace('-', ' ')
@@ -60,13 +57,15 @@ def process_file(file_path, folder, mcp):
             return f"Error reading file: {e}"
     
     try:
-        # Create a Tool object using FastMCP 2.x API
+        # Create a Tool object using FastMCP 3.x API
         tool_obj = Tool.from_function(
             fn=dynamic_tool,
             name=f"{folder}_{filename_token}",
             description=description,
-            tags=tags
         )
+        # Set tags explicitly
+        if hasattr(tool_obj, "tags"):
+             tool_obj.tags = tags
         
         # Register the tool with FastMCP
         mcp.add_tool(tool_obj)
@@ -78,15 +77,26 @@ def process_file(file_path, folder, mcp):
         logger.error(f"  - Tool details: {folder}_{filename_token}, {description[:100]}")
 
 def register_md_tools(mcp):
-    # Look for the cloned prompts directory
-    prompts_dir = Path("/app/prompts")
-    logger.info(f"Looking for prompts in cloned directory: {prompts_dir}")
+    # Try multiple directory locations in order of preference
+    candidate_dirs = [
+        Path("/app/prompts"),
+        Path("../prompts").resolve(),
+        Path.cwd()
+    ]
     
-    if not prompts_dir.exists():
-        logger.error(f"Prompts directory does not exist: {prompts_dir}")
-        # Fallback to current working directory
-        prompts_dir = Path.cwd()
-        logger.info(f"Falling back to current working directory: {prompts_dir}")
+    prompts_dir = None
+    for candidate in candidate_dirs:
+        logger.info(f"Looking for prompts in: {candidate}")
+        if candidate.exists():
+            prompts_dir = candidate
+            logger.info(f"Found prompts directory: {prompts_dir}")
+            break
+        else:
+            logger.warning(f"Directory does not exist: {candidate}")
+    
+    if prompts_dir is None:
+        logger.error("No valid prompts directory found")
+        return
     
     # Only process directories in the prompts folder
     dirs = [d for d in os.listdir(prompts_dir) if os.path.isdir(os.path.join(prompts_dir, d)) and not d.startswith('.') and not d.startswith('__') and d != 'mcp-server']
@@ -124,12 +134,15 @@ def register_md_tools(mcp):
 
 # Create MCP server instance
 logger.info("Creating FastMCP server instance...")
-mcp = FastMCP("🍮")
 
-# Register tools
-logger.info("Starting tool registration...")
-register_md_tools(mcp)
-logger.info("Tool registration completed.")
+@lifespan
+async def register_tools(server):
+    logger.info("Starting tool registration via lifespan...")
+    register_md_tools(server)
+    logger.info("Tool registration completed.")
+    yield
+
+mcp = FastMCP("🍮", lifespan=register_tools)
 
 if __name__ == "__main__":
     logger.info("Starting MCP server...")

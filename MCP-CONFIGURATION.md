@@ -21,7 +21,7 @@ The server name you choose in your `mcp.json` configuration directly affects all
   "mcpServers": {
     "blueprint-prompts-collection-server": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/sse"]
+      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/mcp"]
     }
   }
 }
@@ -36,7 +36,7 @@ The server name you choose in your `mcp.json` configuration directly affects all
   "mcpServers": {
     "bp": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/sse"]
+      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/mcp"]
     }
   }
 }
