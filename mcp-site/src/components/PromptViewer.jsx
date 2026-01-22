@@ -107,7 +107,7 @@ Tool Name: ${prompt.category}_${prompt.filename.replace('.md', '').replace(/[^a-
 \`\`\`
 
 **Quick Setup:**
-1. Install in Cursor: \`npx mcp-install https://prompts.luismachadoreis.dev/sse\`
+1. Install in Cursor: \`npx mcp-install https://prompts.luismachadoreis.dev/mcp\`
 2. Use the tool directly in your AI assistant - that's it!
 
 ### Option 2: Local Docker Server
@@ -115,13 +115,13 @@ For local development or offline use:
 
 **Setup Steps:**
 1. Run the MCP server: \`docker run -d -p 9000:9000 luismachadoreis/the-pudim-blueprint-prompts\`
-2. Install in Cursor: \`npx mcp-install http://localhost:9000/sse\`
+2. Install in Cursor: \`npx mcp-install http://localhost:9000/mcp\`
 3. Use the tool directly in your AI assistant
 
 ### Option 3: Direct Repository Access
 Visit the full prompt in the repository:
 - **File**: \`${prompt.category}/${prompt.filename}\`
-- **Repository**: [blueprint-prompts](https://github.com/luismr/blueprint-prompts/tree/main/${prompt.category})
+- **Repository**: [blueprint-prompts](https://github.com/luismr/blueprint-prompts/tree/main/prompts/${prompt.category})
 
 ### Option 4: Manual Usage
 Copy the prompt structure and adapt it to your needs based on the description and examples above.
@@ -138,7 +138,7 @@ Copy the prompt structure and adapt it to your needs based on the description an
   }
 
   const handleCopyMCPCommand = () => {
-    const setupCommand = `npx mcp-install https://prompts.luismachadoreis.dev/sse`
+    const setupCommand = `npx mcp-install https://prompts.luismachadoreis.dev/mcp`
     navigator.clipboard.writeText(setupCommand)
   }
 

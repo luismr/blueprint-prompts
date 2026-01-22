@@ -31,7 +31,7 @@ const GettingStarted = () => {
               </div>
             </div>
             <div className="code-block">
-              <code>npx mcp-install https://prompts.luismachadoreis.dev/sse</code>
+              <code>npx mcp-install https://prompts.luismachadoreis.dev/mcp</code>
             </div>
             <p className="text-green-400 text-sm mt-3">
               ✨ Ready to use immediately - that's it!
@@ -59,7 +59,7 @@ const GettingStarted = () => {
               <div>
                 <p className="text-slate-400 text-sm mb-2">Step 2: Install in Cursor</p>
                 <div className="code-block">
-                  <code>npx mcp-install http://localhost:9000/sse</code>
+                  <code>npx mcp-install http://localhost:9000/mcp</code>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const GettingStarted = () => {
                 <pre className="text-slate-300 whitespace-pre">{`{
   "mcpServers": {
     "blueprints": {
-      "url": "https://prompts.luismachadoreis.dev/sse"
+      "url": "https://prompts.luismachadoreis.dev/mcp"
     }
   }
 }`}</pre>
@@ -127,7 +127,7 @@ const GettingStarted = () => {
                 <pre className="text-slate-300 whitespace-pre">{`{
   "mcpServers": {
     "blueprints": {
-      "url": "http://localhost:9000/sse"
+      "url": "http://localhost:9000/mcp"
     }
   }
 }`}</pre>

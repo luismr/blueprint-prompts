@@ -40,7 +40,7 @@ const Home = ({ prompts, categories }) => {
             Use the hosted MCP server - no setup required!
           </p>
           <div className="code-block">
-            <code>npx mcp-install https://prompts.luismachadoreis.dev/sse</code>
+            <code>npx mcp-install https://prompts.luismachadoreis.dev/mcp</code>
           </div>
           <p className="text-green-400 text-sm mt-3">
             ✨ Ready to use immediately
@@ -143,7 +143,7 @@ const Home = ({ prompts, categories }) => {
             <code>docker run -d -p 9000:9000 luismachadoreis/the-pudim-blueprint-prompts</code>
           </div>
           <div className="code-block">
-            <code>npx mcp-install http://localhost:9000/sse</code>
+            <code>npx mcp-install http://localhost:9000/mcp</code>
           </div>
         </div>
       </section>

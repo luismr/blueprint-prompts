@@ -60,7 +60,7 @@ docker run \
 Once the server is running, you can install it in Cursor using:
 
 ```sh
-npx mcp-install http://localhost:9000/sse
+npx mcp-install http://localhost:9000/mcp
 ```
 
 This will connect your local Cursor instance to the running MCP server.
@@ -82,7 +82,7 @@ If you configure the server in your `mcp.json` as:
   "mcpServers": {
     "blueprint-prompts": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/sse"]
+      "args": ["-y", "@modelcontextprotocol/server-fetch", "http://localhost:9000/mcp"]
     }
   }
 }

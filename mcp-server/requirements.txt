@@ -1,1 +1,1 @@
-fastmcp>=2.3.3
+fastmcp>=3.0.0b1

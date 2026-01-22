@@ -112,7 +112,7 @@ function scanDirectory(dirPath, category) {
           id: `${category}_${file.replace('.md', '').replace(/[^a-zA-Z0-9]/g, '_')}`,
           filename: file,
           category,
-          path: `../${category}/${file}`,
+          path: `prompts/${category}/${file}`,
           ...metadata,
           categoryInfo: CATEGORIES[category] || { name: category, icon: '📄', color: 'bg-gray-500' }
         };
@@ -137,7 +137,7 @@ function generatePromptsData() {
   const promptsDir = path.join(appDir, 'prompts');
   const rootDir = fs.existsSync(promptsDir) 
     ? promptsDir 
-    : path.resolve(__dirname, '../..');
+    : path.resolve(__dirname, '../../prompts');
   
   console.log('Root directory:', rootDir);
   
