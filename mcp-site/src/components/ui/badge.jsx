@@ -31,4 +31,5 @@ function Badge({
   return (<div className={cn(badgeVariants({ variant }), className)} {...props} />);
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { Badge, badgeVariants }
